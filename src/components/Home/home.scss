@@ -1,0 +1,24 @@
+@use "../../styles/vars";
+
+.home {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__image {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 4rem;
+
+    &__text {
+    }
+  }
+}

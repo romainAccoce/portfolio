@@ -1,15 +1,16 @@
 import './home.scss';
 
-import picture from '../../assets/images/photo1.png';
+import picture from '../../assets/images/photo3.png';
 
 const Home = () => {
   return (
     <div className="home">
-        <div className='homme__image-container'>
-            <img className='home__image-container__image' src={picture}/>
+        <img className='home__image' src={picture}/>
+        <div className='home__text-container'>
+            <p className='home__text-container__text'>Hi,</p>
+            <p className='home__text-container__text'>I'm <strong className='highlight-text'>Romain</strong>,</p> 
+            <p className='home__text-container__text'>Front End / React web developer</p>
         </div>
-        <p className='home__catch-phrase'>Hi, I'm Romain, Front-End web developer</p>
-        <div className='home__contact-button'>contact me</div>
     </div>
   );
 }

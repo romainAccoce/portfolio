@@ -1,0 +1,11 @@
+@use "../../styles/_vars.scss";
+
+.app {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.highlight-text {
+  color: vars.$highlight-text;
+}

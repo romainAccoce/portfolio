@@ -17,10 +17,23 @@
   &__text-container {
     display: flex;
     flex-direction: column;
+    gap: 0.2 * vars.$gutter;
     font-weight: bold;
     font-size: 4rem;
 
     &__text {
     }
+  }
+
+  &__techs-container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5 * vars.$gutter;
+    color: vars.$highlight-text;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 1.5 * vars.$gutter;
+    opacity: 0.7;
   }
 }

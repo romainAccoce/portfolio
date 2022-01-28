@@ -11,6 +11,12 @@ const Home = () => {
             <p className='home__text-container__text'>I'm <strong className='highlight-text'>Romain</strong>,</p> 
             <p className='home__text-container__text'>Front End web developer</p>
         </div>
+        <div className='home__techs-container'>
+            <p className='home__techs-container__tech'>#Javascript</p>
+            <p className='home__techs-container__tech'>#React</p>
+            <p className='home__techs-container__tech'>#Redux</p>
+            <p className='home__techs-container__tech'>#Sass</p>
+        </div>
     </div>
   );
 }

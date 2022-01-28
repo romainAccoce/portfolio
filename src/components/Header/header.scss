@@ -31,5 +31,18 @@
         }
       }
     }
+
+    &__icons-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      &__icon {
+        &:hover {
+          color: vars.$hover-text;
+          transform: translateY(-0.1rem);
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

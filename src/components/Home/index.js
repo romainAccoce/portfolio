@@ -9,7 +9,7 @@ const Home = () => {
         <div className='home__text-container'>
             <p className='home__text-container__text'>Hi,</p>
             <p className='home__text-container__text'>I'm <strong className='highlight-text'>Romain</strong>,</p> 
-            <p className='home__text-container__text'>Front End / React web developer</p>
+            <p className='home__text-container__text'>Front End web developer</p>
         </div>
     </div>
   );

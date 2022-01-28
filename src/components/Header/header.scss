@@ -1,8 +1,34 @@
 @use "../../styles/vars";
 
 .header {
+  color: vars.$light-text;
+  min-height: 100vh;
+  background-color: vars.$nav-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   &__logo {
+    padding: 2 * vars.$gutter;
+    font-weight: bold;
+    font-size: 5rem;
+    background-color: vars.$dark-background;
   }
-  &__menu {
+  &__nav {
+    height: 100%;
+    padding: 2 * vars.$gutter;
+
+    font-size: 1.2rem;
+    &__list {
+      &__item {
+        padding: 1rem;
+
+        &:hover {
+          color: vars.$hover-text;
+          transform: translateX(-0.2rem);
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

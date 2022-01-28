@@ -12,7 +12,7 @@ const Header = () => {
                 <li className='header__nav__list__item'>Contact</li>
             </ul>
         </nav>
-        <div className='header__icons-container'></div>
+        <div className='header__icons-container'>Social media icons</div>
     </div>
   );
 }

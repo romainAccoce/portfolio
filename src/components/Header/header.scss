@@ -1,25 +1,26 @@
 @use "../../styles/vars";
 
 .header {
-  color: vars.$light-text;
-  min-height: 100vh;
-  background-color: vars.$nav-background;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  &__logo {
-    padding: 2 * vars.$gutter;
-    font-weight: bold;
-    font-size: 5rem;
-    background-color: vars.$dark-background;
-  }
   &__nav {
+    color: vars.$light-text;
+    min-height: 100vh;
+    background-color: vars.$nav-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     height: 100%;
-    padding: 2 * vars.$gutter;
-
     font-size: 1.2rem;
+
+    &__logo {
+      padding: 2 * vars.$gutter;
+      font-weight: bold;
+      font-size: 5rem;
+      background-color: vars.$dark-background;
+    }
+
     &__list {
+      padding: 2 * vars.$gutter;
       &__item {
         padding: 1rem;
 

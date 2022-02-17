@@ -1,16 +1,17 @@
 // import { DISPLAY_RULES_MODAL } from "../action/displayOptions";
+import { SELECT_LANGUAGE } from "../actions/displayOptions";
 
 const initialState = {
-  language: 'english',
+  value: 'english',
 }
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    // case  DISPLAY_RULES_MODAL:
-    //   return {
-    //     ...state,
-    //     displayRules: !state.displayRules,
-    //   };
+    case  SELECT_LANGUAGE:
+      return {
+        ...state,
+        language: action.value,
+      };
     default:
       return state;
   }

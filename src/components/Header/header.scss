@@ -19,6 +19,15 @@
       background-color: vars.$dark-background;
     }
 
+    &__languages-container {
+      display: flex;
+      gap: 1rem;
+
+      &__flag {
+        width: 2rem;
+      }
+    }
+
     &__list {
       display: flex;
       flex-direction: column;

@@ -20,6 +20,8 @@
     }
 
     &__list {
+      display: flex;
+      flex-direction: column;
       padding: 2 * vars.$gutter;
       &__item {
         padding: 1rem;

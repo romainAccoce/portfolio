@@ -5,15 +5,16 @@
     color: vars.$light-text;
     min-height: 100vh;
     background-color: vars.$nav-background;
+    padding: 0 2 * vars.$gutter;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    font-size: 1.2rem;
+    // font-size: 1.2rem;
 
     &__logo {
-      padding: 2 * vars.$gutter;
+      // padding: 2 * vars.$gutter;
       font-weight: bold;
       font-size: 5rem;
       background-color: vars.$dark-background;
@@ -31,7 +32,7 @@
     &__list {
       display: flex;
       flex-direction: column;
-      padding: 2 * vars.$gutter;
+      // padding: 2 * vars.$gutter;
       &__item {
         padding: 1rem;
 

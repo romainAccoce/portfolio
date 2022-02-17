@@ -8,6 +8,7 @@ import About from "../About";
 import Skills from "../Skills";
 import Projects from "../Projects";
 import Contact from "../Contact";
+import Error404 from "../Error404";
 import Footer from '../Footer';
 
 const App = () => {
@@ -15,11 +16,12 @@ const App = () => {
     <div className="app">
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" exact element={<Home />} />
+        <Route path="/about" exact element={<About />} />
+        <Route path="/skills" exact element={<Skills />} />
+        <Route path="/projects" exact element={<Projects />} />
+        <Route path="/contact" exact element={<Contact />} />
+        <Route path='*' element={<Error404 />} />
       </Routes>
       <Footer />
     </div>

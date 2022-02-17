@@ -2,7 +2,7 @@
 import { SELECT_LANGUAGE } from "../actions/displayOptions";
 
 const initialState = {
-  value: 'english',
+  language: 'english',
 }
 
 const reducer = (state = initialState, action = {}) => {

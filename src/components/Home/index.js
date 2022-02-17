@@ -1,8 +1,11 @@
 import './home.scss';
-
+import { useSelector } from 'react-redux';
 import picture from '../../assets/images/photo3.png';
 
 const Home = () => {
+
+  const { language } = useSelector((state) => state.displayOptions);
+
   return (
     <div className="home">
         <img className='home__image' src={picture}/>

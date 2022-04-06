@@ -2,7 +2,7 @@ import './skills.scss';
 
 const Skills = () => {
     return (
-        <div>Skills</div>
+        <div>Page en construction</div>
     );
 };
 

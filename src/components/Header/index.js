@@ -15,7 +15,6 @@ const Header = () => {
     const dispatch = useDispatch();
     const { language } = useSelector((state) => state.displayOptions);
 
-
     return (
     <div className="header">
         <nav className='header__nav'>

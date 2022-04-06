@@ -1,0 +1,14 @@
+@use "../../styles/vars";
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: vars.$gutter;
+    justify-content: center;
+    margin: auto;
+    &__project-container {
+        background-color: vars.$highlight-text;
+        width: 20rem;
+        height: 20rem;
+    }
+}

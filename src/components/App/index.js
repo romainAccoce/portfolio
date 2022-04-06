@@ -23,7 +23,6 @@ const App = () => {
         <Route path="/contact" exact element={<Contact />} />
         <Route path='*' element={<Error404 />} />
       </Routes>
-      <Footer />
     </div>
   );
 };

@@ -5,6 +5,7 @@ export const projectsDatas = [
         techs: ['javascript','react', 'redux', 'sass', 'opengraph'],
         url: 'https://devinterest.surge.sh/',
         githubLink: '',
+        image: '',
     },
     {
         name: 'Rock Paper Scissors',
@@ -12,5 +13,6 @@ export const projectsDatas = [
         techs: ['javascript','react', 'redux', 'sass'],
         url: 'https://romacc-rock-paper-scissors.surge.sh/',
         githubLink: 'https://github.com/romainAccoce/rock-paper-scissors',
+        image: '/images/rock-paper-scissors-screenshot.png',
     },
 ]

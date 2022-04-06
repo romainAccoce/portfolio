@@ -1,5 +1,4 @@
 import './projects.scss';
-import { LinkPreview } from '@dhaiwat10/react-link-preview';
 import { projectsDatas } from '../../selectors';
 
 const Projects = () => {
@@ -8,7 +7,9 @@ const Projects = () => {
             {
                 projectsDatas.map((project) => (
                     <div className='projects__project-container' key={project.url}>
-                        <LinkPreview url={project.url} width='400px' />;
+                        <div>
+                            <img className='' src={project.image}/>
+                        </div>
                         <p>{project.name}</p>
                         <p>{project.description}</p>
                         <p>{project.url}</p>

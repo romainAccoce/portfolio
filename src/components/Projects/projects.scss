@@ -6,14 +6,54 @@
     gap: vars.$gutter;
     justify-content: center;
     margin: auto;
-    &__project-container {
-        background-color: vars.$highlight-text;
+    &__project-card {
+        background-color: vars.$nav-background;
         width: 20rem;
         height: 20rem;
+
         &__image {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: none;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            justify-content: space-between;
+            gap: 2 * vars.$gutter;
+            color: vars.$light-text;
+            padding: vars.$gutter;
+            height: 100%;
+
+            &__title {
+                margin-left: auto;
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+            &__techs {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: .5 * vars.$gutter;
+            }
+            &__links {
+                display: flex;
+                gap: 2rem;
+                justify-content: space-evenly;
+                color: vars.$highlight-text;
+                font-weight: bold;
+                
+                &__url {
+                    border: solid .15rem vars.$highlight-text;
+                    padding: 0.5 * vars.$gutter;
+                }
+
+                &__github {
+                    padding: 0.5 * vars.$gutter;                }
+                }
         }
     }
 }

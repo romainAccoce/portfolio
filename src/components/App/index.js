@@ -9,7 +9,6 @@ import Skills from "../Skills";
 import Projects from "../Projects";
 import Contact from "../Contact";
 import Error404 from "../Error404";
-import Footer from '../Footer';
 
 const App = () => {
   return (

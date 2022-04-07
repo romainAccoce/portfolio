@@ -17,8 +17,6 @@ const Home = () => {
         <div className='home__techs-container'>
             <p className='home__techs-container__tech highlight-text'>#Javascript</p>
             <p className='home__techs-container__tech highlight-text'>#React</p>
-            <p className='home__techs-container__tech highlight-text'>#Redux</p>
-            <p className='home__techs-container__tech highlight-text'>#Sass</p>
         </div>
     </div>
   );

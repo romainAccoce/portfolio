@@ -8,8 +8,8 @@
     margin: auto;
     &__project-card {
         background-color: vars.$nav-background;
-        width: 20rem;
-        height: 20rem;
+        width: 25rem;
+        height: 25rem;
 
         &__image {
             width: 100%;
@@ -21,7 +21,6 @@
         &__content {
             display: flex;
             flex-direction: column;
-            // align-items: center;
             justify-content: space-between;
             gap: 2 * vars.$gutter;
             color: vars.$light-text;
@@ -49,11 +48,26 @@
                 &__url {
                     border: solid .15rem vars.$highlight-text;
                     padding: 0.5 * vars.$gutter;
+                    background: linear-gradient(to right, vars.$highlight-text 0%, vars.$highlight-text 50%, vars.$nav-background 50%, vars.$nav-background 100%);
+                    background-size: 200% 100%;
+                    background-position: 100% 0;
+                    transition: all 0.3s;
+  
+                    &:hover {
+                        background-position:0 0;
+                        color: vars.$light-text;
+                    }
                 }
 
                 &__github {
-                    padding: 0.5 * vars.$gutter;                }
+                    padding: 0.5 * vars.$gutter;
+                    transition: all 0.3s;
+                    
+                    &:hover {
+                        transform: translateY(.1rem);
+                    }
                 }
+            }
         }
     }
 }

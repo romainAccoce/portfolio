@@ -10,5 +10,10 @@
         background-color: vars.$highlight-text;
         width: 20rem;
         height: 20rem;
+        &__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }

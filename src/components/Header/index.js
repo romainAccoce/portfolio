@@ -18,7 +18,7 @@ const Header = () => {
     return (
         <div className="header">
             <nav className='header__nav'>
-                <Link to='/' className='header__nav__logo highlight-text'>RA</Link>
+                <Link to='/' className='header__nav__logo highlight-text'>RAC</Link>
                 <div className='header__nav__languages-container'>
                     <img className='header__nav__languages-container__flag' src={ukFlag} onClick={() => dispatch(selectLanguage('english'))}/>
                     <img className='header__nav__languages-container__flag' src={frenchFlag} onClick={() => dispatch(selectLanguage('french'))} />

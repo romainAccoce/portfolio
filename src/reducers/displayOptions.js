@@ -3,8 +3,7 @@ import { SELECT_LANGUAGE, SET_HOVERED, SET_CURRENT_CARD } from "../actions/displ
 
 const initialState = {
   language: 'english',
-  isHovered: false,
-  currentCard: false,
+  currentCard: '',
 }
 
 const reducer = (state = initialState, action = {}) => {
@@ -14,15 +13,10 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         language: action.value,
       };
-    case SET_HOVERED:
-      return {
-        ...state,
-        isHovered: !state.isHovered,
-      };
     case SET_CURRENT_CARD:
       return {
         ...state,
-        currentCard: !state.currentCard,
+        currentCard: action.value,
       };
     default:
       return state;

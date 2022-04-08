@@ -6,16 +6,10 @@ export const selectLanguage = (value) => (
   }
 );
 
-export const SET_HOVERED = "SET_HOVERED";
-export const setHovered = () => (
-  {
-  type: SET_HOVERED,
-  }
-);
-
 export const SET_CURRENT_CARD = "SET_CURRENT_CARD";
-export const setCurrentCard = () => (
+export const setCurrentCard = (value) => (
   {
-  type: SET_CURRENT_CARD,
+    type: SET_CURRENT_CARD,
+    value,
   }
 );

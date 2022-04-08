@@ -20,6 +20,7 @@
             left: 0;
             object-fit: cover;
             transition: width .3s, height .3s, top .3s, left .3s;
+            z-index: 1;
 
             &--current {
                 top: vars.$gutter;
@@ -41,17 +42,22 @@
             position: absolute;
             top: 0;
             left: 0;
+            z-index: 0;
 
             &__title {
                 margin-left: auto;
                 font-weight: bold;
                 font-size: 1.5rem;
+                max-width: 70%;
             }
             &__techs {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: .5 * vars.$gutter;
+                max-width: 70%;
+                margin-left: auto;
+                margin-top: -6 * vars.$gutter;
             }
             &__links {
                 display: flex;

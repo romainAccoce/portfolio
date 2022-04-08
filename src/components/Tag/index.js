@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Tag = ({tech}) => {
 
     return (
-        <div className='tag'>{tech}</div>
+        <div className='tag'>#{tech}</div>
     );
 };
 

@@ -1,8 +1,6 @@
 @use "../../styles/vars";
 
 .tag {
-    background-color: vars.$highlight-text;
-    border-radius: 10rem;
-    padding: .5 * vars.$gutter vars.$gutter;
+    color: vars.$highlight-text;
     font-size: .8rem;
 }

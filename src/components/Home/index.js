@@ -15,8 +15,7 @@ const Home = () => {
             <p className='home__text-container__text'>Front End web developer</p>
         </div>
         <div className='home__techs-container'>
-            <p className='home__techs-container__tech highlight-text'>#Javascript</p>
-            <p className='home__techs-container__tech highlight-text'>#React</p>
+            <p className='home__techs-container__tech highlight-text'>#ReactWebDeveloper</p>
         </div>
     </div>
   );

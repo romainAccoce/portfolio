@@ -17,7 +17,6 @@ const Projects = () => {
                         <img alt='project image' className={ currentCard === project.name ? 'projects__project-card__image projects__project-card__image--current' : 'projects__project-card__image'} src={project.image}/>
                         <div className='projects__project-card__content'>
                             <p className='projects__project-card__content__title'>{project.name}</p>
-                            <p className='projects__project-card__content__description'>{project.description}</p>
                             <div className='projects__project-card__content__techs'>
                                 {
                                     project.techs.map((tech) => (
@@ -25,6 +24,7 @@ const Projects = () => {
                                     ))
                                 }
                             </div>
+                            <p className='projects__project-card__content__description'>{project.description}</p>
                             <div className='projects__project-card__content__links'>
                                 <a className='projects__project-card__content__links__url'href={project.url}>Go to website</a>
                                 <a className='projects__project-card__content__links__github' href={project.githubLink}>Source code</a>

@@ -12,3 +12,10 @@ export const setHovered = () => (
   type: SET_HOVERED,
   }
 );
+
+export const SET_CURRENT_CARD = "SET_CURRENT_CARD";
+export const setCurrentCard = () => (
+  {
+  type: SET_CURRENT_CARD,
+  }
+);

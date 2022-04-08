@@ -1,9 +1,10 @@
 // import { DISPLAY_RULES_MODAL } from "../action/displayOptions";
-import { SELECT_LANGUAGE, SET_HOVERED } from "../actions/displayOptions";
+import { SELECT_LANGUAGE, SET_HOVERED, SET_CURRENT_CARD } from "../actions/displayOptions";
 
 const initialState = {
   language: 'english',
   isHovered: false,
+  currentCard: false,
 }
 
 const reducer = (state = initialState, action = {}) => {
@@ -17,6 +18,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         isHovered: !state.isHovered,
+      };
+    case SET_CURRENT_CARD:
+      return {
+        ...state,
+        currentCard: !state.currentCard,
       };
     default:
       return state;

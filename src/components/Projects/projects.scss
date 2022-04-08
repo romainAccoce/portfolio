@@ -48,14 +48,16 @@
                 margin-left: auto;
                 font-weight: bold;
                 font-size: 1.5rem;
-                max-width: 70%;
+                width: 60%;
+                text-align: center;
             }
             &__techs {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: .5 * vars.$gutter;
-                max-width: 70%;
+                width: 60%;
+                text-align: center;
                 margin-left: auto;
                 margin-top: -6 * vars.$gutter;
             }

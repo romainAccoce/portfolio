@@ -10,14 +10,24 @@
         background-color: vars.$nav-background;
         width: 25rem;
         height: 25rem;
-
+        position: relative;
+        
         &__image {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: none;
-        }
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
 
+            &:hover {
+                z-index: 0;
+                display: none;
+            }
+
+        }
+        
         &__content {
             display: flex;
             flex-direction: column;
@@ -26,6 +36,9 @@
             color: vars.$light-text;
             padding: vars.$gutter;
             height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
 
             &__title {
                 margin-left: auto;

@@ -5,3 +5,10 @@ export const selectLanguage = (value) => (
     value,
   }
 );
+
+export const SET_HOVERED = "SET_HOVERED";
+export const setHovered = () => (
+  {
+  type: SET_HOVERED,
+  }
+);

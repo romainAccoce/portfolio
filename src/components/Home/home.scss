@@ -13,8 +13,16 @@
     gap: 0.2 * vars.$gutter;
     font-weight: bold;
     font-size: 4rem;
+    overflow: hidden;
 
     &__text {
+        animation: 2s slide-right .3s forwards;
+        transform:translateX(-100%);
+    }
+    @keyframes slide-right {
+      to {
+        transform: translateX(0);
+      }
     }
   }
 

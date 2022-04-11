@@ -7,14 +7,6 @@
   align-items: center;
   margin: auto;
 
-  &__image {
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    object-fit: contain;
-    box-shadow: 0.3rem 0.3rem 1.2rem vars.$dark-text;
-  }
-
   &__text-container {
     display: flex;
     flex-direction: column;

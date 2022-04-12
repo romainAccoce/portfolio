@@ -26,14 +26,12 @@
     }
   }
 
-  &__techs-container {
+  &__tech-specification {
     width: 100%;
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5 * vars.$gutter;
     font-size: 1.5rem;
     font-weight: bold;
     padding-top: 1.5 * vars.$gutter;
     opacity: 0.7;
+    color: vars.$highlight-text;
   }
 }

@@ -3,6 +3,7 @@ import { projectsDatas } from '../../selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCurrentCard } from '../../actions/displayOptions';
 import Tag from '../Tag';
+import Button from '../Button';
 
 const Projects = () => {
 
@@ -26,7 +27,7 @@ const Projects = () => {
                             </div>
                             <p className='projects__project-card__content__description'>{project.description}</p>
                             <div className='projects__project-card__content__links'>
-                                <a className='projects__project-card__content__links__url'href={project.url}>Go to website</a>
+                                <Button name="Go to website" link={project.url} dark={true}/>
                                 <a className='projects__project-card__content__links__github' href={project.githubLink}>Source code</a>
                             </div>
                         </div>

@@ -1,0 +1,24 @@
+@use "../../styles/vars";
+
+.button {
+    border: solid .15rem vars.$highlight-text;
+    font-weight: bold;
+    color: vars.$highlight-text;
+    padding: 0.5 * vars.$gutter;
+    background: linear-gradient(to right, vars.$highlight-text 0%, vars.$highlight-text 50%, vars.$light-background 50%, vars.$light-background 100%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: all 0.3s;
+    
+    &--dark {
+        background: linear-gradient(to right, vars.$highlight-text 0%, vars.$highlight-text 50%, vars.$nav-background 50%, vars.$nav-background 100%);
+        background-size: 200% 100%;
+        background-position: 100% 0;
+        transition: all 0.3s;
+    }
+
+    &:hover {
+        background-position: 0 0;
+        color: vars.$light-text;
+    }
+}

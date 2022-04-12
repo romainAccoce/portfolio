@@ -6,6 +6,7 @@
   justify-content: space-around;
   align-items: center;
   margin: auto;
+  gap: 1.5 * vars.$gutter;
 
   &__text-container {
     display: flex;
@@ -30,8 +31,9 @@
     width: 100%;
     font-size: 1.5rem;
     font-weight: bold;
-    padding-top: 1.5 * vars.$gutter;
     opacity: 0.7;
     color: vars.$highlight-text;
   }
 }
+
+

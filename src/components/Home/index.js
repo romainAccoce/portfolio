@@ -12,7 +12,7 @@ const Home = () => {
             <p className='home__text-container__text'>Front End web developer</p>
         </div>
         <p className='home__tech-specification'>#ReactDeveloper</p>
-        <Button name="Contact me"/>
+        <Button className='home__button' name='Contact me!' size={'large'}/>
     </div>
   );
 }

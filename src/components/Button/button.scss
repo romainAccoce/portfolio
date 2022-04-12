@@ -20,5 +20,18 @@
     &:hover {
         background-position: 0 0;
         color: vars.$light-text;
+        cursor: pointer;
+    }
+
+    &__link {
+        &--small {
+            font-size: .8rem;
+        }
+        &--medium {
+            font-size: 1rem;
+        }
+        &--large {
+            font-size: 1.5rem;
+        }
     }
 }

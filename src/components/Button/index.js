@@ -2,11 +2,19 @@ import './button.scss';
 
 import PropTypes from 'prop-types';
 
-const Button = ({name, link, dark}) => {
+/*
+Generic button params: 
+- name: define text content
+- link: define button action
+- dark: define button background
+- size: define text size (small, medium or large)
+*/
+
+const Button = ({name, link, dark, size}) => {
 
     return (
         <div className={dark ? 'button button--dark' : 'button'}>
-            <a className='button__link' href={link}>{name}</a>
+            <a className={`button__link button__link--${size}`} href={link}>{name}</a>
         </div>
     );
 };
@@ -14,12 +22,14 @@ const Button = ({name, link, dark}) => {
 Button.propTypes = {
   name: PropTypes.string.isRequired,
   link: PropTypes.string,
+  size: PropTypes.string,
   dark: PropTypes.bool,
 };
 
 Button.defaultProps = {
-    link: "",
+    link: '',
     dark: false,
+    size: 'medium',
 };
 
 export default Button;

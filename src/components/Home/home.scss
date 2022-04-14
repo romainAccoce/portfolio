@@ -15,11 +15,7 @@
     gap: 0.2 * vars.$gutter;
     
     &__title {
-      transform:translateX(-5%);
-      animation:3s fade-in ease, 
-      1s slide-right forwards;
-      font-weight: bold;
-      font-size: 6rem;
+      // setup in styles/index.js
       letter-spacing: .4rem;
     }
     
@@ -28,13 +24,23 @@
       letter-spacing: .2rem;
       color: grey;
       margin-top: 2 * vars.$gutter;
-      display: inline-block;
       border-right: .15em solid vars.$highlight-text;
+      display: inline-block;
       overflow: hidden;
       white-space: nowrap;
       width: 0;
       animation: typing 3s steps(50, end) forwards 1s,
       blinking .75s infinite;
+
+      @keyframes typing {
+        from {
+          width: 0
+        }
+      
+        to {
+          width: 30.2rem;
+        }
+      }
     }
   }
 
@@ -43,42 +49,6 @@
     margin-top: 1rem;
     animation: 3s fade-in 4s ease, 1s slide-right 4s forwards;
     transform: translateX(-101%);
-  }
-
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slide-right {
-    to {
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes typing {
-    from {
-      width: 0
-    }
-  
-    to {
-      width: 30.2rem;
-    }
-  }
-  
-  @keyframes blinking {
-    from {
-      border-color: transparent
-    }
-  
-    to {
-      border-color: vars.$highlight-text;
-    }
   }
 }
 

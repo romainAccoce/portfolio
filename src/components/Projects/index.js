@@ -12,7 +12,9 @@ const Projects = () => {
 
     return (
         <div className='projects'>
-            <h2 className='projects__title'>My work</h2>
+            <div className='projects__page-title'>
+                <h2 className='projects__page-title__text'>My work</h2>
+            </div>
             {
                 projectsDatas.map((project) => (
                     <div className='projects__project-card' key={project.url} onMouseOver={() => dispatch(setCurrentCard(project.name))} onMouseLeave={() => dispatch(setCurrentCard(""))}>

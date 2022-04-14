@@ -13,19 +13,17 @@ h2, h3, a {
 }
 
 h2 {
+  opacity: 0;
   transform:translateX(-5%);
-  animation:3s fade-in ease,
-  1s slide-right forwards;
+  animation:
+    3s fade-in .5s forwards,
+    1s slide-right .5s forwards;
   font-weight: bold;
   font-size: 6rem;
 }
 
   @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
+    to {
       opacity: 1;
     }
   }

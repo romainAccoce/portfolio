@@ -19,13 +19,14 @@
     }
 
     &__project-card {
+        opacity: 0;
         background-color: vars.$nav-background;
         width: 25rem;
         height: 25rem;
         position: relative;
-        transform: translateX(5%);
+        transform: translateX(100%);
         animation:
-            1s fade-in ease,
+            1s fade-in forwards,
             1s slide-left forwards;
         &__image {
             width: 100%;

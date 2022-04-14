@@ -10,7 +10,7 @@ const Home = () => {
             <h2 className='home__text-container__title'>
               Hi,<br/>
               I'm <strong className='highlight-text'>Romain</strong><br/>
-              Web developer
+              web developer
             </h2>
             <p className='home__text-container__tech'>Front End developer / React expert</p>
         </div>

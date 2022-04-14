@@ -1,6 +1,14 @@
 @use "../../styles/vars";
 
 .header {
+
+  &__logo {
+    padding: 1.5 * vars.$gutter;
+    font-weight: bold;
+    font-size: 3.5rem;
+    background-color: vars.$dark-background;
+  }
+  
   &__nav {
     color: vars.$light-text;
     min-height: 100vh;
@@ -11,13 +19,13 @@
     justify-content: space-around;
     align-items: center;
     font-size: 1.2rem;
+    transform: translateX(-101%);
+    transition: all .3s;
 
-    &__logo {
-      padding: 1.5 * vars.$gutter;
-      font-weight: bold;
-      font-size: 3.5rem;
-      background-color: vars.$dark-background;
+    &--active {
+      transform: translateX(0);
     }
+
 
     &__languages-container {
       display: flex;

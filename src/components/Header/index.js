@@ -1,6 +1,6 @@
 import './header.scss';
 import { Link } from 'react-router-dom';
-import { selectLanguage } from '../../actions/displayOptions';
+import { selectLanguage, setDisplayMenu } from '../../actions/displayOptions';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
@@ -13,12 +13,12 @@ import ukFlag from '../../assets/images/Flag_of_Great_Britain.png';
 const Header = () => {
 
     const dispatch = useDispatch();
-    const { language } = useSelector((state) => state.displayOptions);
+    const { language, displayMenu } = useSelector((state) => state.displayOptions);
 
     return (
         <div className="header">
-            <nav className='header__nav'>
-                <Link to='/' className='header__nav__logo highlight-text'>RAC</Link>
+            <Link to='/' className='header__logo highlight-text' onClick={() => dispatch(setDisplayMenu())}>RAC</Link>
+            <nav className={ displayMenu ? 'header__nav header__nav--active' : 'header__nav'} >
                 <div className='header__nav__languages-container'>
                     <img className='header__nav__languages-container__flag' src={ukFlag} onClick={() => dispatch(selectLanguage('english'))}/>
                     <img className='header__nav__languages-container__flag' src={frenchFlag} onClick={() => dispatch(selectLanguage('french'))} />

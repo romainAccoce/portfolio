@@ -9,13 +9,13 @@ const Home = () => {
         <div className='home__text-container'>
             <h2 className='home__text-container__title'>
               Hi,<br/>
-              I'm <strong className='highlight-text'>Romain</strong><br/>
+              I'm <strong className='highlight-text'>Romain</strong>,<br/>
               web developer
             </h2>
             <p className='home__text-container__tech'>Front End developer / React expert</p>
         </div>
         <div className='home__button'>
-          <Button name='Contact me!' size={'large'}/>
+          <Button name='Contact me' size={'large'}/>
         </div>
     </div>
   );

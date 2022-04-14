@@ -13,3 +13,10 @@ export const setCurrentCard = (value) => (
     value,
   }
 );
+
+export const SET_DISPLAY_MENU = "SET_DISPLAY_MENU";
+export const setDisplayMenu = () => (
+  {
+    type: SET_DISPLAY_MENU,
+  }
+);

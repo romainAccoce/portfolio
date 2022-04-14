@@ -20,6 +20,7 @@
     }
     
     &__tech {
+      opacity: 0;
       font-size: 1.5rem;
       letter-spacing: .2rem;
       color: grey;
@@ -29,8 +30,10 @@
       overflow: hidden;
       white-space: nowrap;
       width: 0;
-      animation: typing 3s steps(50, end) forwards 1.5s,
-      blinking .75s infinite;
+      animation:
+      typing 3s steps(50, end) forwards 1.5s,
+      .75s fade-in 1.5s forwards,
+      blinking .75s ease;
 
       @keyframes typing {
         from {
@@ -38,7 +41,7 @@
         }
       
         to {
-          width: 30.2rem;
+          width: 31rem;
         }
       }
     }

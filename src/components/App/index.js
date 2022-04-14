@@ -11,6 +11,7 @@ import Contact from "../Contact";
 import Error404 from "../Error404";
 
 const App = () => {
+
   return (
     <div className="app">
       <Header />

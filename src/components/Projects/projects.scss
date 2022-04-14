@@ -15,7 +15,6 @@
         color: vars.$highlight-text;
         width: 100%;
         margin-bottom: 3 * vars.$gutter;
-        width: 100%;
     }
 
     &__project-card {
@@ -44,7 +43,6 @@
                 width: 30%;
                 height: 30%;
             }
-
         }
         
         &__content {

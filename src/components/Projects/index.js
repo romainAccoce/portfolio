@@ -12,12 +12,13 @@ const Projects = () => {
 
     return (
         <div className='projects'>
+            <h2 className='projects__title'>My work</h2>
             {
                 projectsDatas.map((project) => (
                     <div className='projects__project-card' key={project.url} onMouseOver={() => dispatch(setCurrentCard(project.name))} onMouseLeave={() => dispatch(setCurrentCard(""))}>
                         <img alt='project image' className={ currentCard === project.name ? 'projects__project-card__image projects__project-card__image--current' : 'projects__project-card__image'} src={project.image}/>
                         <div className='projects__project-card__content'>
-                            <p className='projects__project-card__content__title'>{project.name}</p>
+                            <h3 className='projects__project-card__content__title'>{project.name}</h3>
                             <div className='projects__project-card__content__techs'>
                                 {
                                     project.techs.map((tech) => (

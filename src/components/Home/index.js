@@ -7,9 +7,11 @@ const Home = () => {
   return (
     <div className="home">
         <div className='home__text-container'>
-            <p className='home__text-container__line'>Hi,</p>
-            <p className='home__text-container__line'>I'm <strong className='highlight-text'>Romain</strong>,</p> 
-            <p className='home__text-container__line'>Web developer</p>
+            <h2 className='home__text-container__title'>
+              Hi,<br/>
+              I'm <strong className='highlight-text'>Romain</strong><br/>
+              Web developer
+            </h2>
             <p className='home__text-container__tech'>Front End developer / React expert</p>
         </div>
         <div className='home__button'>

@@ -2,10 +2,23 @@
 
 .projects {
     display: flex;
+    gap: 2 * vars.$gutter;
     flex-wrap: wrap;
     gap: vars.$gutter;
     justify-content: center;
     margin: auto;
+    transform:translateX(-5%);
+    animation:.5s fade-in ease,
+    .5s slide-right forwards;
+
+    &__title {
+        font-size: 5rem;
+        font-weight: bold;
+        color: vars.$highlight-text;
+        width: 100%;
+        margin-bottom: 3 * vars.$gutter;
+    }
+
     &__project-card {
         background-color: vars.$nav-background;
         width: 25rem;

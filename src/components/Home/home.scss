@@ -14,9 +14,10 @@
     flex-direction: column;
     gap: 0.2 * vars.$gutter;
     
-    &__line {
+    &__title {
       transform:translateX(-5%);
-      animation:.5s fade-in ease, .5s slide-right forwards;
+      animation:3s fade-in ease, 
+      1s slide-right forwards;
       font-weight: bold;
       font-size: 6rem;
       letter-spacing: .4rem;
@@ -25,22 +26,22 @@
     &__tech {
       font-size: 1.5rem;
       letter-spacing: .2rem;
-      opacity: 0.7;
-      color: vars.$highlight-text;
+      color: grey;
       margin-top: 2 * vars.$gutter;
       display: inline-block;
       border-right: .15em solid vars.$highlight-text;
       overflow: hidden;
       white-space: nowrap;
       width: 0;
-      animation: typing 3s steps(50, end) forwards .5s, blinking .75s infinite;
+      animation: typing 3s steps(50, end) forwards 1s,
+      blinking .75s infinite;
     }
   }
 
   &__button {
     margin-right: auto;
     margin-top: 1rem;
-    animation: 3s fade-in 3s ease, 1s slide-right 3s forwards;
+    animation: 3s fade-in 4s ease, 1s slide-right 4s forwards;
     transform: translateX(-101%);
   }
 
@@ -66,7 +67,7 @@
     }
   
     to {
-      width: 29.9rem;
+      width: 30.2rem;
     }
   }
   

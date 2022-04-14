@@ -2,8 +2,12 @@
 @use "vars";
 
 body {
-  font-family: "roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   background-color: vars.$light-background;
   color: vars.$dark-text;
   font-size: 1rem;
+}
+
+h2, h3, a {
+    font-family: "Roboto", sans-serif;
 }

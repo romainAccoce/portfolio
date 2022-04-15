@@ -24,15 +24,15 @@ const Header = () => {
                     <Burger />
                 </div>
                 <Link to='/' className='header__logo highlight-text'>RAC</Link>
-                <div className='header__nav__languages-container'>
+                {/* <div className='header__nav__languages-container'>
                     <img className='header__nav__languages-container__flag' src={ukFlag} onClick={() => dispatch(selectLanguage('english'))}/>
                     <img className='header__nav__languages-container__flag' src={frenchFlag} onClick={() => dispatch(selectLanguage('french'))} />
-                </div>
+                </div> */}
                 <ul className='header__nav__list'>
-                    <Link to='/about' className='header__nav__list__item__about'>{language==='english' ? 'About' : 'A propos'}</Link>
-                    <Link to='/skills' className='header__nav__list__item__skills'>{language==='english' ? 'Skills' : 'Compétences'}</Link>
-                    <Link to='/projects' className='header__nav__list__item__projects'>{language==='english' ? 'Projects' : 'Projets'}</Link>
-                    <Link to='/contact' className='header__nav__list__item__contact'>Contact</Link>
+                    <Link to='/about' className={ displayMenu ? 'header__nav__list__item header__nav__list__item--about-active' : 'header__nav__list__item' }>{language==='english' ? 'About' : 'A propos'}</Link>
+                    <Link to='/skills' className={ displayMenu ? 'header__nav__list__item header__nav__list__item--skills-active' : 'header__nav__list__item' }>{language==='english' ? 'Skills' : 'Compétences'}</Link>
+                    <Link to='/projects' className={ displayMenu ? 'header__nav__list__item header__nav__list__item--projects-active' : 'header__nav__list__item' }>{language==='english' ? 'Projects' : 'Projets'}</Link>
+                    <Link to='/contact' className={ displayMenu ? 'header__nav__list__item header__nav__list__item--contact-active' : 'header__nav__list__item' }>Contact</Link>
                 </ul>
                 <div className='header__nav__icons-container'>
                     <a className='header__nav__icons-container__icon' href="https://github.com/romainAccoce/" target="_blank" rel="noreferrer">

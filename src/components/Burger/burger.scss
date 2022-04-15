@@ -8,9 +8,9 @@
         font-size: 4rem;
         line-height: .6rem;
         animation: .3s fade-in forwards;
+        transition: all .3s;
 
         &:hover {
-            color: vars.$hover-text;
             transform: translateX(0.2rem);
             cursor: pointer;
         }

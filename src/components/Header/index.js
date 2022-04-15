@@ -1,6 +1,7 @@
 import './header.scss';
+import Burger from '../Burger';
 import { Link } from 'react-router-dom';
-import { selectLanguage, setDisplayMenu } from '../../actions/displayOptions';
+import { selectLanguage } from '../../actions/displayOptions';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
@@ -17,17 +18,20 @@ const Header = () => {
 
     return (
         <div className="header">
-            <Link to='/' className='header__logo highlight-text' onClick={() => dispatch(setDisplayMenu())}>RAC</Link>
             <nav className={ displayMenu ? 'header__nav header__nav--active' : 'header__nav'} >
+                <div className='header__nav__burger-button'>
+                    <Burger />
+                </div>
+                <Link to='/' className='header__logo highlight-text'>RAC</Link>
                 <div className='header__nav__languages-container'>
                     <img className='header__nav__languages-container__flag' src={ukFlag} onClick={() => dispatch(selectLanguage('english'))}/>
                     <img className='header__nav__languages-container__flag' src={frenchFlag} onClick={() => dispatch(selectLanguage('french'))} />
                 </div>
                 <ul className='header__nav__list'>
-                    <Link to='/about' className='header__nav__list__item'>{language==='english' ? 'About' : 'A propos'}</Link>
-                    <Link to='/skills' className='header__nav__list__item'>{language==='english' ? 'Skills' : 'Compétences'}</Link>
-                    <Link to='/projects' className='header__nav__list__item'>{language==='english' ? 'Projects' : 'Projets'}</Link>
-                    <Link to='/contact' className='header__nav__list__item'>Contact</Link>
+                    <Link to='/about' className='header__nav__list__item__about'>{language==='english' ? 'About' : 'A propos'}</Link>
+                    <Link to='/skills' className='header__nav__list__item__skills'>{language==='english' ? 'Skills' : 'Compétences'}</Link>
+                    <Link to='/projects' className='header__nav__list__item__projects'>{language==='english' ? 'Projects' : 'Projets'}</Link>
+                    <Link to='/contact' className='header__nav__list__item__contact'>Contact</Link>
                 </ul>
                 <div className='header__nav__icons-container'>
                     <a className='header__nav__icons-container__icon' href="https://github.com/romainAccoce/" target="_blank" rel="noreferrer">

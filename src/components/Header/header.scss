@@ -21,9 +21,16 @@
     font-size: 1.2rem;
     transform: translateX(-101%);
     transition: all .3s;
+    position: relative;
 
     &--active {
       transform: translateX(0);
+    }
+
+    &__burger-button {
+      position: absolute;
+      right: -4rem;
+      top: 0;
     }
 
 

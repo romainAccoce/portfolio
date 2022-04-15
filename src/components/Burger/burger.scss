@@ -1,0 +1,7 @@
+@use "../../styles/vars";
+
+.burger {
+    color: vars.$highlight-text;
+    font-size: 4rem;
+    line-height: .6rem;
+}

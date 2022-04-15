@@ -1,7 +1,18 @@
 @use "../../styles/vars";
 
 .burger {
-    color: vars.$highlight-text;
-    font-size: 4rem;
-    line-height: .6rem;
+
+    &--active {
+        opacity: 0;
+        color: vars.$highlight-text;
+        font-size: 4rem;
+        line-height: .6rem;
+        animation: .3s fade-in forwards;
+
+        &:hover {
+            color: vars.$hover-text;
+            transform: translateX(0.2rem);
+            cursor: pointer;
+        }
+    }
 }

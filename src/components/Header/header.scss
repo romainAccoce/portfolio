@@ -27,6 +27,26 @@
       transform: translateX(0);
     }
 
+    &__close-button {
+      color: vars.$light-text;
+      font-size: 3rem;
+      position: absolute;
+      top: 0;
+      right: .7 * vars.$gutter;
+      transition: all .3s;
+
+      &--active {
+        transform: rotate(45deg);
+        
+        &:hover {
+            color: vars.$hover-text;
+            transform: translateX(0.2rem) rotate(45deg);
+            cursor: pointer;
+        }
+      }
+
+    }
+
     &__burger-button {
       position: absolute;
       right: -4rem;

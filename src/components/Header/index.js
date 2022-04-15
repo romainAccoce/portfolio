@@ -1,7 +1,7 @@
 import './header.scss';
 import Burger from '../Burger';
 import { Link } from 'react-router-dom';
-import { selectLanguage } from '../../actions/displayOptions';
+import { selectLanguage, setDisplayMenu } from '../../actions/displayOptions';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
@@ -19,6 +19,7 @@ const Header = () => {
     return (
         <div className="header">
             <nav className={ displayMenu ? 'header__nav header__nav--active' : 'header__nav'} >
+                <div className={ displayMenu ? 'header__nav__close-button header__nav__close-button--active' : 'header__nav__close-button'}   onClick={() => dispatch(setDisplayMenu())}>+</div>
                 <div className='header__nav__burger-button'>
                     <Burger />
                 </div>

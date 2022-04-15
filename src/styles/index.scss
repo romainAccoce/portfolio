@@ -27,6 +27,12 @@ h2 {
       opacity: 1;
     }
   }
+
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+    }
+  }
   
   @keyframes slide-right {
     to {
@@ -65,15 +71,11 @@ h2 {
       transform: translateX(-100%);
     }
   
-    33% {
-      transform: translateX(105%);
-    }
-
-    66% {
-      transform: translateX(95%);
+    50% {
+      transform: translateX(10%);
     }
 
     100% {
-      transform: translateX(100%);
+      transform: translateX(0%);
     }
   }

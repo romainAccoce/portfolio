@@ -34,7 +34,7 @@ const Header = () => {
                     <Link to='/projects' className={ displayMenu ? 'header__nav__list__item header__nav__list__item--projects-active' : 'header__nav__list__item' }>{language==='english' ? 'Projects' : 'Projets'}</Link>
                     <Link to='/contact' className={ displayMenu ? 'header__nav__list__item header__nav__list__item--contact-active' : 'header__nav__list__item' }>Contact</Link>
                 </ul>
-                <div className='header__nav__icons-container'>
+                <div className={displayMenu ? 'header__nav__icons-container header__nav__icons-container--active' : 'header__nav__icons-container'}>
                     <a className='header__nav__icons-container__icon' href="https://github.com/romainAccoce/" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>

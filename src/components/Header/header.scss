@@ -13,13 +13,13 @@
     color: vars.$light-text;
     min-height: 100vh;
     background-color: vars.$nav-background;
-    padding: 0 2 * vars.$gutter;
+    // padding: 0 2 * vars.$gutter;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     font-size: 1.2rem;
-    transform: translateX(-101%);
+    transform: translateX(-100%);
     transition: all .3s;
     position: relative;
 
@@ -29,7 +29,7 @@
 
     &__close-button {
       color: vars.$light-text;
-      font-size: 3rem;
+      font-size: 2.5rem;
       position: absolute;
       top: 0;
       right: .7 * vars.$gutter;
@@ -39,7 +39,8 @@
         transform: rotate(45deg);
         
         &:hover {
-            transform: translateX(0.2rem) rotate(45deg);
+            transform: rotate(45deg);
+            color: vars.$hover-text;
             cursor: pointer;
         }
       }
@@ -65,39 +66,40 @@
     &__list {
       display: flex;
       flex-direction: column;
-      transform: translateX(-100%);
       &__item {
         padding: 1rem;
         display: flex;
         flex-direction: column;
-        opacity: 0;
+        transition: all .3s;
+        animation: .3 fade-out forwards;
+        opacity: 1;
+        transform: translateX(-100%);
 
         &:hover {
           color: vars.$hover-text;
-          transform: translateX(-0.2rem);
           cursor: pointer;
         }
 
         &--about-active {
           animation: 
-          1.5s bounce forwards,
+          1s bounce forwards,
           .3s fade-in forwards;
         }
         &--skills-active {
           animation:
-          1.5s bounce .1s forwards,
+          1s bounce .1s forwards,
           .3s fade-in .1s forwards;
         }
         
         &--projects-active {
           animation:
-          1.5s bounce .2s forwards,
+          1s bounce .2s forwards,
           .3s fade-in .2s forwards;
         }
         
         &--contact-active {
           animation:
-          1.5s bounce .3s forwards,
+          1s bounce .3s forwards,
           .3s fade-in .3s forwards;
         }
       }
@@ -107,7 +109,19 @@
       width: 100%;
       display: flex;
       justify-content: space-evenly;
+      transition: all .3s;
+      animation: .3 fade-out forwards;
+      opacity: 1;
+      transform: translateX(-100%);
+
+      &--active {
+        animation: 1s bounce forwards,
+        .3s fade-in forwards;
+      }
+
       &__icon {
+        transition: all .3s;
+
         &:hover {
           color: vars.$hover-text;
           transform: translateY(-0.1rem);

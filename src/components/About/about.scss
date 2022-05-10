@@ -1,0 +1,17 @@
+@use "../../styles/vars";
+
+.about {
+    display: flex;
+    max-height: 100vh;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__image {
+        object-fit: cover;
+        width: 50%;
+    }
+}

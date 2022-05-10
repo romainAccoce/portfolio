@@ -2,7 +2,6 @@
 
 .projects {
     display: flex;
-    gap: 2 * vars.$gutter;
     flex-wrap: wrap;
     gap: vars.$gutter;
     justify-content: center;
@@ -10,11 +9,8 @@
     transform:translateX(-5%);
 
     &__page-title {
-        font-size: 5rem;
-        font-weight: bold;
-        color: vars.$highlight-text;
+        // setup in styles/index.js
         width: 100%;
-        margin-bottom: 3 * vars.$gutter;
     }
 
     &__project-card {

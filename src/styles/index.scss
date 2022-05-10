@@ -20,6 +20,8 @@ h2 {
     1s slide-right .5s forwards;
   font-weight: bold;
   font-size: 6rem;
+  color: vars.$highlight-text;
+  margin-bottom: 3 * vars.$gutter;
 }
 
   @keyframes fade-in {

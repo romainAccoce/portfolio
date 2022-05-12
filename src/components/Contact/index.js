@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <div className='contact'>
             <div className='contact__map'>
-                <Map />;
+                <Map />
             </div>
         </div>
     );

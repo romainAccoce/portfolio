@@ -18,16 +18,12 @@ const ContactForm = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Subject</label>
-      <input type="text" name="subject" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
+    <form className='form' ref={form} onSubmit={sendEmail}>
+      <input className='form__input form__input__name' type="text" name="user_name" placeholder='Name'/>
+      <input className='form__input form__input__email' type="email" name="user_email" placeholder='Email' />
+      <input className='form__input form__input__subject' type="text" name="subject" placeholder='Subject' />
+      <textarea className='form__input form__input__message' name="message" placeholder='Message' />
+      <input className='form__submit button' type="submit" value="Send message" />
     </form>
   );
 };

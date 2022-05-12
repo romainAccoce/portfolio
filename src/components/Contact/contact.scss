@@ -1,5 +1,9 @@
-.map-container {
+.contact {
+    width: 100%;
     height: 100vh;
-    width: 50%;
-    margin-left: auto;
+    &__map {
+        width: 50%;
+        height: 100%;
+        margin-left: auto;
+    }
 }

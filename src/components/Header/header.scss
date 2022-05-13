@@ -13,7 +13,6 @@
     color: vars.$light-text;
     min-height: 100vh;
     background-color: vars.$nav-background;
-    // padding: 0 2 * vars.$gutter;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -82,24 +81,24 @@
 
         &--about-active {
           animation: 
-          1s bounce forwards,
+          1s bounce-right forwards,
           .3s fade-in forwards;
         }
         &--skills-active {
           animation:
-          1s bounce .1s forwards,
+          1s bounce-right .1s forwards,
           .3s fade-in .1s forwards;
         }
         
         &--projects-active {
           animation:
-          1s bounce .2s forwards,
+          1s bounce-right .2s forwards,
           .3s fade-in .2s forwards;
         }
         
         &--contact-active {
           animation:
-          1s bounce .3s forwards,
+          1s bounce-right .3s forwards,
           .3s fade-in .3s forwards;
         }
       }
@@ -115,7 +114,7 @@
       transform: translateX(-100%);
 
       &--active {
-        animation: 1s bounce forwards,
+        animation: 1s bounce-right forwards,
         .3s fade-in forwards;
       }
 

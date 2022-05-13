@@ -6,12 +6,13 @@
     display: flex;
 
     &__content {
+        opacity: 0;
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        // gap: 3 * vars.$gutter;
         padding: 4 * vars.$gutter;
+        animation: 1s fade-in .1s forwards;
 
         &__text {
             font-size: 1.2rem;

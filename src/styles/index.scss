@@ -68,7 +68,7 @@ h2 {
     }
   }
 
-  @keyframes bounce {
+  @keyframes bounce-right {
     0% {
       transform: translateX(-100%);
     }
@@ -81,3 +81,17 @@ h2 {
       transform: translateX(0%);
     }
   }
+
+  @keyframes bounce-up {
+  0% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    transform: translateY(-5%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}

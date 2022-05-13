@@ -21,7 +21,7 @@
         position: relative;
         transform: translateX(100%);
         animation:
-            1s fade-in forwards,
+            1.5s fade-in forwards,
             1s slide-left forwards;
         &__image {
             width: 100%;

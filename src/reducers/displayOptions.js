@@ -3,7 +3,7 @@ import { SELECT_LANGUAGE, SET_HOVERED, SET_CURRENT_CARD, SET_DISPLAY_MENU } from
 
 const initialState = {
   language: 'english',
-  currentCard: '',
+  currentCard: ' ',
   displayMenu: false,
 }
 

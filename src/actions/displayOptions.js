@@ -22,8 +22,9 @@ export const setDisplayMenu = () => (
 );
 
 export const SET_DISPLAY_SUCCESS_MODAL = "SET_DISPLAY_SUCCESS_MODAL";
-export const setDisplaySuccessModal = () => (
+export const setDisplaySuccessModal = (value) => (
   {
     type: SET_DISPLAY_SUCCESS_MODAL,
+    value,
   }
 );

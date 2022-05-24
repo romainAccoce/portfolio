@@ -5,7 +5,7 @@ const initialState = {
   language: 'english',
   currentCard: ' ',
   displayMenu: false,
-  displaySuccessModal: false,
+  displaySuccessModal: '',
 }
 
 const reducer = (state = initialState, action = {}) => {
@@ -28,7 +28,7 @@ const reducer = (state = initialState, action = {}) => {
     case SET_DISPLAY_SUCCESS_MODAL:
       return {
         ...state,
-        displaySuccessModal: !state.displaySuccessModal,
+        displaySuccessModal: action.value,
       };
     
     default:

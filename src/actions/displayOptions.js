@@ -20,3 +20,10 @@ export const setDisplayMenu = () => (
     type: SET_DISPLAY_MENU,
   }
 );
+
+export const SET_DISPLAY_SUCCESS_MODAL = "SET_DISPLAY_SUCCESS_MODAL";
+export const setDisplaySuccessModal = () => (
+  {
+    type: SET_DISPLAY_SUCCESS_MODAL,
+  }
+);

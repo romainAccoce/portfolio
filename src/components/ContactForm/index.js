@@ -1,9 +1,13 @@
 
 import './contact-form.scss';
 import { useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { setDisplaySuccessModal } from '../../actions/displayOptions';
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+
+  const dispatch = useDispatch();
   const form = useRef();
 
   const sendEmail = (event) => {
@@ -12,6 +16,7 @@ const ContactForm = () => {
     emailjs.sendForm(process.env.REACT_APP_MAIL_SERVICE_ID, process.env.REACT_APP_MAIL_TEMPLATE_ID, form.current, process.env.REACT_APP_MAIL_PUBLIC_KEY)
       .then((result) => {
           console.log(result.text);
+          dispatch(setDisplaySuccessModal());
       }, (error) => {
           console.log(error.text);
       });

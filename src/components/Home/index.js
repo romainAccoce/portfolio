@@ -1,5 +1,4 @@
 import './home.scss';
-import { useSelector } from 'react-redux';
 import Button from '../Button';
 
 const Home = () => {
@@ -15,7 +14,7 @@ const Home = () => {
             <p className='home__text-container__tech'>Front End developer / React expert</p>
         </div>
         <div className='home__button'>
-          <Button name='Contact me' size={'large'}/>
+          <Button name='Contact me' size={'large'} link='/contact' />
         </div>
     </div>
   );

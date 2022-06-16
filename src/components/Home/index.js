@@ -4,7 +4,7 @@ import Button from '../Button';
 const Home = () => {
 
   return (
-    <div className="home">
+    <div className="home" id='home'>
         <div className='home__text-container'>
             <div className='home__text-container__title'>
               Hi,<br/>

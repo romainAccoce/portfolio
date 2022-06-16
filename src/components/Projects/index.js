@@ -11,7 +11,7 @@ const Projects = () => {
     const { currentCard } = useSelector((state) => state.displayOptions);
 
     return (
-        <div className='projects'>
+        <div className='projects' id='projects'>
             <div className='projects__page-title'>
                 <h2 className='projects__page-title__text'>My work</h2>
             </div>

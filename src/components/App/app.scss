@@ -2,9 +2,12 @@
 
 .app {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   min-height: 100vh;
+
+  &__sections {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .highlight-text {

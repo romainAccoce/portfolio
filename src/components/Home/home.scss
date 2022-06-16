@@ -8,6 +8,7 @@
   gap: 2 * vars.$gutter;
   overflow: hidden;
   transform: translateX(-10%);
+  height: 100vh;
 
   &__text-container {
     display: flex;

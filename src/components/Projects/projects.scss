@@ -7,6 +7,7 @@
     justify-content: center;
     margin: auto;
     transform:translateX(-5%);
+    min-height: 100vh;
 
     &__page-title {
         // setup in styles/index.js

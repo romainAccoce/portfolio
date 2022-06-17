@@ -1,6 +1,9 @@
 @use "../../styles/vars";
 
 .header {
+  position: fixed;
+  left: 0;
+  bottom: 0;
 
   &__logo {
     padding: 1.5 * vars.$gutter;

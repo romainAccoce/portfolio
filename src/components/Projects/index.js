@@ -12,32 +12,32 @@ const Projects = () => {
 
     return (
         <div className='projects' id='projects'>
-            <div className='projects__page-title'>
-                <h2 className='projects__page-title__text'>My work</h2>
-            </div>
+            <h2>My work</h2>
+            <div className='projects__container'>
             {
                 projectsDatas.map((project) => (
-                    <div className='projects__project-card' key={project.url} onMouseOver={() => dispatch(setCurrentCard(project.name))} onMouseLeave={() => dispatch(setCurrentCard(""))}>
-                        <img alt='project image' className={ currentCard === project.name ? 'projects__project-card__image projects__project-card__image--current' : 'projects__project-card__image'} src={project.image}/>
-                        <div className='projects__project-card__content'>
-                            <h3 className='projects__project-card__content__title'>{project.name}</h3>
-                            <div className='projects__project-card__content__techs'>
+                    <div className='projects__container__project-card' key={project.url} onMouseOver={() => dispatch(setCurrentCard(project.name))} onMouseLeave={() => dispatch(setCurrentCard(""))}>
+                        <img alt='project image' className={ currentCard === project.name ? 'projects__container__project-card__image projects__container__project-card__image--current' : 'projects__container__project-card__image'} src={project.image}/>
+                        <div className='projects__container__project-card__content'>
+                            <h3 className='projects__container__project-card__content__title'>{project.name}</h3>
+                            <div className='projects__container__project-card__content__techs'>
                                 {
                                     project.techs.map((tech) => (
                                         <Tag tech={tech}/>
                                     ))
                                 }
                             </div>
-                            <p className='projects__project-card__content__description'>{project.description}</p>
-                            <div className='projects__project-card__content__links'>
+                            <p className='projects__container__project-card__content__description'>{project.description}</p>
+                            <div className='projects__container__project-card__content__links'>
                                 <Button name="Go to website" link={project.url} dark={true}/>
-                                <a className='projects__project-card__content__links__github' href={project.githubLink}>Source code</a>
+                                <a className='projects__container__project-card__content__links__github' href={project.githubLink}>Source code</a>
                             </div>
                         </div>
                     </div>
                     ),
                 )
             }
+            </div>
         </div>
     );
 };

@@ -2,6 +2,7 @@ import './header.scss';
 import Burger from '../Burger';
 import { selectLanguage, setDisplayMenu } from '../../actions/displayOptions';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link, animateScroll as scroll } from "react-scroll";
 import {
   faLinkedinIn, faTwitter, faGithub,
 } from '@fortawesome/free-brands-svg-icons';
@@ -9,10 +10,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import frenchFlag from '../../assets/images/Flag_of_France.png';
 import ukFlag from '../../assets/images/Flag_of_Great_Britain.png';
 
-const Header = () => {
-
+const Header = ({sectionRef}) => {
     const dispatch = useDispatch();
     const { language, displayMenu } = useSelector((state) => state.displayOptions);
+
+    // const scrollToSection = (elementRef) => {
+    //     console.log(sectionRef)
+    //     window.scrollTo({
+    //         top: elementRef.current.offsetTop,
+    //         behavior: 'smooth',
+    //     })
+    // };
+
+
 
     return (
         <div className="header">
@@ -21,16 +31,54 @@ const Header = () => {
                 <div className='header__nav__burger-button'>
                     <Burger />
                 </div>
-                <div className='header__logo highlight-text'>RAC</div>
                 {/* <div className='header__nav__languages-container'>
                     <img className='header__nav__languages-container__flag' src={ukFlag} onClick={() => dispatch(selectLanguage('english'))}/>
                     <img className='header__nav__languages-container__flag' src={frenchFlag} onClick={() => dispatch(selectLanguage('french'))} />
                 </div> */}
                 <ul className='header__nav__list'>
-                    <li className={ displayMenu ? 'header__nav__list__item header__nav__list__item--about-active' : 'header__nav__list__item' }>{language==='english' ? 'About' : 'A propos'}</li>
-                    <li className={ displayMenu ? 'header__nav__list__item header__nav__list__item--skills-active' : 'header__nav__list__item' }>{language==='english' ? 'Skills' : 'Compétences'}</li>
+                    <li>
+                        <Link
+                            className={ displayMenu ? 'header__nav__list__item header__nav__list__item--about-active' : 'header__nav__list__item' }
+                            activeClass="active"
+                            to="home"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                        >{language==='english' ? 'Home' : 'Accueil'}</Link>
+                    </li>
+                    <li>
+                        <Link
+                            className={ displayMenu ? 'header__nav__list__item header__nav__list__item--about-active' : 'header__nav__list__item' }
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                        >{language==='english' ? 'About' : 'A propos'}</Link>
+                    </li>
+                    <li>
+                        <Link
+                            className={ displayMenu ? 'header__nav__list__item header__nav__list__item--projects-active' : 'header__nav__list__item' }
+                            activeClass="active"
+                            to="projects"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                        >{language==='english' ? 'Projects' : 'Projets'}</Link>
+                    </li>
+                    <li>
+                        <Link
+                            className={ displayMenu ? 'header__nav__list__item header__nav__list__item--contact-active' : 'header__nav__list__item' }
+                            activeClass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                        >Contact</Link>
+                    </li>
+                    {/* <li className={ displayMenu ? 'header__nav__list__item header__nav__list__item--about-active' : 'header__nav__list__item' }>{language==='english' ? 'About' : 'A propos'}</li>
                     <li className={ displayMenu ? 'header__nav__list__item header__nav__list__item--projects-active' : 'header__nav__list__item' }>{language==='english' ? 'Projects' : 'Projets'}</li>
-                    <li className={ displayMenu ? 'header__nav__list__item header__nav__list__item--contact-active' : 'header__nav__list__item' }>Contact</li>
+                    <li className={ displayMenu ? 'header__nav__list__item header__nav__list__item--contact-active' : 'header__nav__list__item' }>Contact</li> */}
                 </ul>
                 <div className={displayMenu ? 'header__nav__icons-container header__nav__icons-container--active' : 'header__nav__icons-container'}>
                     <a className='header__nav__icons-container__icon' href="https://github.com/romainAccoce/" target="_blank" rel="noreferrer">

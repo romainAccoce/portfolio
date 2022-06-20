@@ -2,6 +2,7 @@ import './about.scss';
 import Image from '../../assets/images/photo1.png';
 
 const About = () => {
+
     return (
         <div className='about' id='about'>
             <div className='about__content'>

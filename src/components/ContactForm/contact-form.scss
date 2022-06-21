@@ -18,35 +18,35 @@
         }
 
         &__name {
-            opacity: 0;
+            // opacity: 0;
             width: 49.47%;
-            animation:
-                1s bounce-up .1s forwards,
-                .5s fade-in .1s forwards;
+            // animation:
+            //     1s bounce-up .1s forwards,
+            //     .5s fade-in .1s forwards;
         }
 
         &__email {
-            opacity: 0;
+            // opacity: 0;
             width: 49.47%;
-            animation:
-                1s bounce-up .1s forwards,
-                .5s fade-in .1s forwards;
+            // animation:
+            //     1s bounce-up .1s forwards,
+            //     .5s fade-in .1s forwards;
         }
 
         &__subject {
-            opacity: 0;
-            animation:
-                1s bounce-up .2s forwards,
-                .5s fade-in .2s forwards;
+            // opacity: 0;
+            // animation:
+            //     1s bounce-up .2s forwards,
+            //     .5s fade-in .2s forwards;
         }
 
         &__message {
-            opacity: 0;
+            // opacity: 0;
             height: 10rem;
             resize: none;
-            animation:
-                1s bounce-up .3s forwards,
-                .5s fade-in .3s forwards;
+            // animation:
+            //     1s bounce-up .3s forwards,
+            //     .5s fade-in .3s forwards;
 
             &:focus {
                 outline: none;
@@ -56,12 +56,12 @@
     }
 
     &__submit {
-        opacity: 0;
+        // opacity: 0;
         margin-left: auto;
         margin-top: 2rem;
         font-size: 1.2rem;
-        animation:
-            1s bounce-up .5s forwards,
-            .3s fade-in .5s forwards;
+        // animation:
+        //     1s bounce-up .5s forwards,
+        //     .3s fade-in .5s forwards;
     }
 }

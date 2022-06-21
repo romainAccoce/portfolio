@@ -26,11 +26,11 @@ const ContactForm = () => {
 
   return (
     <form className='form' ref={form} onSubmit={sendEmail}>
-      <input className='form__input form__input__name' type="text" name="user_name" placeholder='Name' required/>
-      <input className='form__input form__input__email' type="email" name="user_email" placeholder='Email' required />
-      <input className='form__input form__input__subject' type="text" name="subject" placeholder='Subject' required />
-      <textarea className='form__input form__input__message' name="message" placeholder='Message' required />
-      <input className='form__submit button' type="submit" value="Send message" />
+      <input data-aos="fade-up" className='form__input form__input__name' type="text" name="user_name" placeholder='Name' required/>
+      <input data-aos="fade-up" className='form__input form__input__email' type="email" name="user_email" placeholder='Email' required />
+      <input data-aos="fade-up" className='form__input form__input__subject' type="text" name="subject" placeholder='Subject' required />
+      <textarea data-aos="fade-up" className='form__input form__input__message' name="message" placeholder='Message' required />
+      <input data-aos="fade-up" className='form__submit button' type="submit" value="Send message" />
     </form>
   );
 };

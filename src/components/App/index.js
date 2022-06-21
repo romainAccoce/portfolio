@@ -1,4 +1,7 @@
 import './app.scss';
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import AOS from "aos";
 
 import Header from '../Header';
 import Home from '../Home';
@@ -9,6 +12,11 @@ import Contact from "../Contact";
 import Error404 from "../Error404";
 
 const App = () => {
+
+  useEffect(() => {
+    AOS.init({duration: 2000});
+    // AOS.refresh();
+  }, []);
 
   return (
     <div className="app">

@@ -18,17 +18,21 @@
         }
 
         &__text {
-            opacity: 0;
+            // opacity: 0;
             font-size: 1.5rem;
-            animation: .5s fade-in .1s forwards;
+            // animation: .5s fade-in .1s forwards;
         }
 
     }
 
     &__image {
-        opacity: 0;
+        // opacity: 0;
         object-fit: cover;
         width: 50%;
-        animation: 3s fade-in forwards;
+        // animation: 3s fade-in forwards;
     }
+}
+
+.hide-content {
+    opacity: 0;
 }

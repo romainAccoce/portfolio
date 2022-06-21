@@ -2,7 +2,7 @@ import './header.scss';
 import Burger from '../Burger';
 import { selectLanguage, setDisplayMenu } from '../../actions/displayOptions';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import {
   faLinkedinIn, faTwitter, faGithub,
 } from '@fortawesome/free-brands-svg-icons';
@@ -10,19 +10,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import frenchFlag from '../../assets/images/Flag_of_France.png';
 import ukFlag from '../../assets/images/Flag_of_Great_Britain.png';
 
-const Header = ({sectionRef}) => {
+const Header = () => {
     const dispatch = useDispatch();
     const { language, displayMenu } = useSelector((state) => state.displayOptions);
-
-    // const scrollToSection = (elementRef) => {
-    //     console.log(sectionRef)
-    //     window.scrollTo({
-    //         top: elementRef.current.offsetTop,
-    //         behavior: 'smooth',
-    //     })
-    // };
-
-
 
     return (
         <div className="header">

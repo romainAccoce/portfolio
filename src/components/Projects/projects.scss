@@ -11,18 +11,13 @@
         gap: vars.$gutter;
         justify-content: center;
         align-items: center;
-        // transform:translateX(-5%);
 
         &__project-card {
-            opacity: 0;
             background-color: vars.$nav-background;
             width: 25rem;
             height: 25rem;
             position: relative;
-            transform: translateX(100%);
-            animation:
-                1.5s fade-in forwards,
-                1s slide-left forwards;
+            
             &__image {
                 width: 100%;
                 height: 100%;

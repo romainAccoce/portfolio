@@ -18,19 +18,15 @@
         }
 
         &__text {
-            // opacity: 0;
             font-size: 1.5rem;
-            // animation: .5s fade-in .1s forwards;
         }
 
     }
 
     &__image {
-        // opacity: 0;
         object-fit: cover;
         width: 40%;
         height: 90%;
         margin: auto;
-        // animation: 3s fade-in forwards;
     }
 }

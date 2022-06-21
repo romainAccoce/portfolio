@@ -82,18 +82,18 @@
           cursor: pointer;
         }
 
-        &--about-active {
+        &--home-active {
           animation: 
           1s bounce-right forwards,
           .3s fade-in forwards;
         }
-        &--skills-active {
+        &--projects-active {
           animation:
           1s bounce-right .1s forwards,
           .3s fade-in .1s forwards;
         }
         
-        &--projects-active {
+        &--about-active {
           animation:
           1s bounce-right .2s forwards,
           .3s fade-in .2s forwards;

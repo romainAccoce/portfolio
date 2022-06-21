@@ -38,23 +38,13 @@ const Header = ({sectionRef}) => {
                 <ul className='header__nav__list'>
                     <li>
                         <Link
-                            className={ displayMenu ? 'header__nav__list__item header__nav__list__item--about-active' : 'header__nav__list__item' }
+                            className={ displayMenu ? 'header__nav__list__item header__nav__list__item--home-active' : 'header__nav__list__item' }
                             activeClass="active"
                             to="home"
                             spy={true}
                             smooth={true}
                             duration={500}
                         >{language==='english' ? 'Home' : 'Accueil'}</Link>
-                    </li>
-                    <li>
-                        <Link
-                            className={ displayMenu ? 'header__nav__list__item header__nav__list__item--about-active' : 'header__nav__list__item' }
-                            activeClass="active"
-                            to="about"
-                            spy={true}
-                            smooth={true}
-                            duration={500}
-                        >{language==='english' ? 'About' : 'A propos'}</Link>
                     </li>
                     <li>
                         <Link
@@ -68,6 +58,17 @@ const Header = ({sectionRef}) => {
                     </li>
                     <li>
                         <Link
+                            className={ displayMenu ? 'header__nav__list__item header__nav__list__item--about-active' : 'header__nav__list__item' }
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                        >{language==='english' ? 'About' : 'A propos'}</Link>
+                    </li>
+
+                    <li>
+                        <Link
                             className={ displayMenu ? 'header__nav__list__item header__nav__list__item--contact-active' : 'header__nav__list__item' }
                             activeClass="active"
                             to="contact"
@@ -76,9 +77,6 @@ const Header = ({sectionRef}) => {
                             duration={500}
                         >Contact</Link>
                     </li>
-                    {/* <li className={ displayMenu ? 'header__nav__list__item header__nav__list__item--about-active' : 'header__nav__list__item' }>{language==='english' ? 'About' : 'A propos'}</li>
-                    <li className={ displayMenu ? 'header__nav__list__item header__nav__list__item--projects-active' : 'header__nav__list__item' }>{language==='english' ? 'Projects' : 'Projets'}</li>
-                    <li className={ displayMenu ? 'header__nav__list__item header__nav__list__item--contact-active' : 'header__nav__list__item' }>Contact</li> */}
                 </ul>
                 <div className={displayMenu ? 'header__nav__icons-container header__nav__icons-container--active' : 'header__nav__icons-container'}>
                     <a className='header__nav__icons-container__icon' href="https://github.com/romainAccoce/" target="_blank" rel="noreferrer">

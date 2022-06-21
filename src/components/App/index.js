@@ -23,8 +23,8 @@ const App = () => {
       <Header />
       <div className='app__sections'>
         <Home />
-        <About />
         <Projects />
+        <About />
         <Contact />
       </div>
     </div>

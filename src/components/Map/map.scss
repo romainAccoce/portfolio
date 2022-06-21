@@ -1,6 +1,10 @@
-.map-container {
+.map {
     // opacity: 0;
     width: 100%;
     height: 100%;
     // animation: 1s fade-in .1s forwards;
+    &__container {
+        width: 100%;
+        height: 100%;
+    }
 }

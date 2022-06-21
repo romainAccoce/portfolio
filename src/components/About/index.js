@@ -1,5 +1,5 @@
 import './about.scss';
-import Image from '../../assets/images/photo1.png';
+import Image from '../../assets/images/photo5.jpg';
 
 const About = () => {
 

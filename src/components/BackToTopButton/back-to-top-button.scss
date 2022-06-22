@@ -2,7 +2,7 @@
 
 .scroll {
     color: vars.$highlight-text;
-    font-size: 3rem;
+    font-size: 2rem;
     position: fixed;
     z-index: 1;
     bottom: 2rem;
@@ -16,8 +16,8 @@
     &__to-top {
         border: .2rem solid vars.$highlight-text;
         border-radius: 50%;
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
         display: flex;
         justify-content: center;
         align-items: center;

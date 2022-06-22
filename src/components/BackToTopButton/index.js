@@ -7,6 +7,12 @@ import { FaAngleDoubleUp } from 'react-icons/fa'
 const BackToTopButton = () => {
     const dispatch = useDispatch();
     const { scrollToTopButton } = useSelector((state) => state.displayOptions);
+    const scrollToTop = () => {
+        window.scrollTo( {
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -22,7 +28,7 @@ const BackToTopButton = () => {
 
 
     return (
-        <div className={ scrollToTopButton ? 'scroll' : 'scroll scroll--reverse' }>
+        <div onClick={ () => scrollToTop()} className={ scrollToTopButton ? 'scroll' : 'scroll scroll--reverse' }>
             <div className={ scrollToTopButton ? 'scroll__to-top' : 'scroll__to-bottom' }  >
                 <FaAngleDoubleUp />
             </div>

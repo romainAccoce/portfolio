@@ -16,9 +16,11 @@
     z-index: 1;
     bottom: 2rem;
     right: 2rem;
+    transition: all .3s;
 
     &:hover{
         cursor: pointer;
         background-color: vars.$hover-text;
+        transform: translateY(-0.1rem);
     }
 }

@@ -5,7 +5,7 @@ import { setDisplayMenu } from '../../actions/displayOptions';
 
 const Burger = () => {
     const dispatch = useDispatch();
-    const { displayMenu } = useSelector((state) => state.displayOptions);
+    const { displayMenu, scrollToTopButton } = useSelector((state) => state.displayOptions);
 
     return (
         <div className={ displayMenu ? 'burger' : 'burger burger--active' }   onClick={() => dispatch(setDisplayMenu())}>

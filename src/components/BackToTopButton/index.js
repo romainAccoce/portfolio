@@ -1,18 +1,13 @@
 import './back-to-top-button.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useRef } from 'react';
+import { scrollToTop } from '../../selectors';
+import { useEffect } from 'react';
 import { setScrollToTopButton } from '../../actions/displayOptions';
 import { FaAngleDoubleUp } from 'react-icons/fa'
 
 const BackToTopButton = () => {
     const dispatch = useDispatch();
     const { scrollToTopButton } = useSelector((state) => state.displayOptions);
-    const scrollToTop = () => {
-        window.scrollTo( {
-            top: 0,
-            behavior: 'smooth',
-        });
-    };
 
     useEffect(() => {
         window.addEventListener('scroll', () => {

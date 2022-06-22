@@ -33,19 +33,4 @@
     &__to-bottom {
         animation: 1s bounce-down infinite;
     }
-
-}
-
-@keyframes bounce-down {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
 }

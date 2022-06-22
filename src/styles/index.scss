@@ -19,54 +19,70 @@ h2 {
   margin-bottom: 3 * vars.$gutter;
 }
 
-  @keyframes fade-in {
-    to {
-      opacity: 1;
-    }
+// Animations setup for all project
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-right {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
   }
 
-  @keyframes fade-out {
-    to {
-      opacity: 0;
-    }
+  to {
+    width: 100%;
   }
-  
-  @keyframes slide-right {
-    to {
-      transform: translateX(0);
-    }
-  }
- 
-  @keyframes typing {
-    from {
-      width: 0
-    }
-  
-    to {
-      width: 100%;
-    }
-  }
-  
-  @keyframes blinking {
-    from {
-      border-color: transparent
-    }
-  
-    to {
-      border-color: vars.$highlight-text;
-    }
+}
+
+@keyframes blinking {
+  from {
+    border-color: transparent
   }
 
-  @keyframes bounce-right {
-    0% {
-      transform: translateX(-100%);
-    }
-  
-    50% {
-      transform: translateX(10%);
-    }
-
-    100% {
-      transform: translateX(0%);
-    }
+  to {
+    border-color: vars.$highlight-text;
   }
+}
+
+@keyframes translate-right {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes bounce-down {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

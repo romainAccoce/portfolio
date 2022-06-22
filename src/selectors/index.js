@@ -16,3 +16,10 @@ export const projectsDatas = [
         image: '/images/rock-paper-scissors-screenshot.png',
     },
 ]
+
+export const scrollToTop = () => {
+    window.scrollTo( {
+        top: 0,
+        behavior: 'smooth',
+    });
+};

@@ -8,6 +8,7 @@ import Home from '../Home';
 import About from "../About";
 import Projects from "../Projects";
 import Contact from "../Contact";
+import BackToTopButton from '../BackToTopButton';
 
 const App = () => {
 
@@ -19,6 +20,7 @@ const App = () => {
   return (
     <div className="app">
       <Header />
+      <BackToTopButton />
       <div className='app__sections'>
         <Home />
         <Projects />

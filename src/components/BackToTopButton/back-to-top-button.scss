@@ -1,0 +1,24 @@
+@use "../../styles/vars";
+
+.back-to-top {
+    border: none;
+    border-radius: 50%;
+    background-color: vars.$highlight-text;
+    color: vars.$light-text;
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    bottom: 2rem;
+    right: 2rem;
+
+    &:hover{
+        cursor: pointer;
+        background-color: vars.$hover-text;
+    }
+}

@@ -14,32 +14,29 @@
     }
 
     &__to-top {
-        border: none;
+        border: .2rem solid vars.$highlight-text;
         border-radius: 50%;
-        font-size: 3rem;
-        width: 3.5rem;
-        height: 3.5rem;
-        // padding: vars.$gutter;
+        width: 4rem;
+        height: 4rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: vars.$highlight-text;
-        color: vars.$light-text;
 
         &:hover{
             cursor: pointer;
-            background-color: vars.$hover-text;
+            background-color: vars.$highlight-text;
+            color: vars.$light-text;
             transform: translateY(-0.1rem);
         }
     }
 
     &__to-bottom {
-        animation: 1s bounce-2 infinite;
+        animation: 1s bounce-down infinite;
     }
 
 }
 
-@keyframes bounce-2 {
+@keyframes bounce-down {
     0% {
         transform: translateY(0);
     }

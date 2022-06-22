@@ -29,7 +29,7 @@ const Header = () => {
                     <li>
                         <Link
                             className={ displayMenu ? 'header__nav__list__item header__nav__list__item--home-active' : 'header__nav__list__item' }
-                            activeClass="active"
+                            activeClass="active-link"
                             to="home"
                             spy={true}
                             smooth={true}
@@ -39,7 +39,7 @@ const Header = () => {
                     <li>
                         <Link
                             className={ displayMenu ? 'header__nav__list__item header__nav__list__item--projects-active' : 'header__nav__list__item' }
-                            activeClass="active"
+                            activeClass="active-link"
                             to="projects"
                             spy={true}
                             smooth={true}
@@ -49,7 +49,7 @@ const Header = () => {
                     <li>
                         <Link
                             className={ displayMenu ? 'header__nav__list__item header__nav__list__item--about-active' : 'header__nav__list__item' }
-                            activeClass="active"
+                            activeClass="active-link"
                             to="about"
                             spy={true}
                             smooth={true}
@@ -60,7 +60,7 @@ const Header = () => {
                     <li>
                         <Link
                             className={ displayMenu ? 'header__nav__list__item header__nav__list__item--contact-active' : 'header__nav__list__item' }
-                            activeClass="active"
+                            activeClass="active-link"
                             to="contact"
                             spy={true}
                             smooth={true}

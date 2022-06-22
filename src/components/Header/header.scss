@@ -76,6 +76,9 @@
         animation: .3 fade-out forwards;
         opacity: 1;
         transform: translateX(-100%);
+        &.active-link {
+          color: vars.$hover-text;
+        }
 
         &:hover {
           color: vars.$hover-text;

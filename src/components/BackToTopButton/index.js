@@ -22,8 +22,10 @@ const BackToTopButton = () => {
 
 
     return (
-        <div className={ scrollToTopButton ? 'scroll-to-top' : 'scroll-to-top scroll-to-top--reverse' }  >
-            <FaAngleDoubleUp />
+        <div className={ scrollToTopButton ? 'scroll' : 'scroll scroll--reverse' }>
+            <div className={ scrollToTopButton ? 'scroll__to-top' : 'scroll__to-bottom' }  >
+                <FaAngleDoubleUp />
+            </div>
         </div>
     );
 };

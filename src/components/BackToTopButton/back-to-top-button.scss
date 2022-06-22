@@ -1,30 +1,54 @@
 @use "../../styles/vars";
 
-.scroll-to-top {
-    border: none;
-    border-radius: 50%;
-    background-color: vars.$highlight-text;
-    color: vars.$light-text;
-    width: 3rem;
-    height: 3rem;
+.scroll {
+    color: vars.$highlight-text;
     font-size: 3rem;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed;
     z-index: 1;
     bottom: 2rem;
     right: 2rem;
     transition: all .3s;
 
-    &:hover{
-        cursor: pointer;
-        background-color: vars.$hover-text;
-        transform: translateY(-0.1rem);
-    }
-
     &--reverse {
         transform: rotate(180deg);
+    }
+
+    &__to-top {
+        border: none;
+        border-radius: 50%;
+        font-size: 3rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        // padding: vars.$gutter;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: vars.$highlight-text;
+        color: vars.$light-text;
+
+        &:hover{
+            cursor: pointer;
+            background-color: vars.$hover-text;
+            transform: translateY(-0.1rem);
+        }
+    }
+
+    &__to-bottom {
+        animation: 1s bounce-2 infinite;
+    }
+
+}
+
+@keyframes bounce-2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }

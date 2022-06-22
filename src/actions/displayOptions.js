@@ -28,3 +28,11 @@ export const setDisplaySuccessModal = (value) => (
     value,
   }
 );
+
+export const SET_SCROLL_TO_TOP_BUTTON = "SET_SCROLL_TO_TOP_BUTTON";
+export const setScrollToTopButton = (value) => (
+  {
+    type: SET_SCROLL_TO_TOP_BUTTON,
+    value,
+  }
+);

@@ -1,6 +1,6 @@
 @use "../../styles/vars";
 
-.back-to-top {
+.scroll-to-top {
     border: none;
     border-radius: 50%;
     background-color: vars.$highlight-text;
@@ -22,5 +22,9 @@
         cursor: pointer;
         background-color: vars.$hover-text;
         transform: translateY(-0.1rem);
+    }
+
+    &--reverse {
+        transform: rotate(180deg);
     }
 }

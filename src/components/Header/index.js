@@ -22,7 +22,7 @@ const Header = () => {
                 <div className='header__nav__burger-button'>
                     <Burger />
                 </div>
-                <div className='header__nav__darkmode-toggle'>
+                <div className={ displayMenu ? 'header__nav__darkmode-toggle header__nav__darkmode-toggle--active' : 'header__nav__darkmode-toggle' } >
                     <ToggleButton isOn={darkMode} handleToggle={ ()=> dispatch(setDarkMode())} />
                 </div>
                 {/* <div className='header__nav__languages-container'>

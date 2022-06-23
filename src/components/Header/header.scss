@@ -32,6 +32,14 @@
     &__darkmode-toggle {
       position: absolute;
       top: 4 * vars.$gutter;
+      animation: .3 fade-out forwards;
+      opacity: 1;
+      transform: translateX(-100%);
+
+      &--active {
+        animation: 1s translate-right forwards,
+        .3s fade-in forwards;
+      }
     }
 
     &__close-button {

@@ -1,18 +1,19 @@
 import './header.scss';
 import Burger from '../Burger';
-import { selectLanguage, setDisplayMenu } from '../../actions/displayOptions';
+import { selectLanguage, setDisplayMenu, setDarkMode } from '../../actions/displayOptions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-scroll";
 import {
   faLinkedinIn, faTwitter, faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ToggleButton from '../ToggleButton';
 import frenchFlag from '../../assets/images/Flag_of_France.png';
 import ukFlag from '../../assets/images/Flag_of_Great_Britain.png';
 
 const Header = () => {
     const dispatch = useDispatch();
-    const { language, displayMenu } = useSelector((state) => state.displayOptions);
+    const { language, displayMenu, darkMode } = useSelector((state) => state.displayOptions);
 
     return (
         <div className="header">
@@ -20,6 +21,9 @@ const Header = () => {
                 <div className={ displayMenu ? 'header__nav__close-button header__nav__close-button--active' : 'header__nav__close-button'}   onClick={() => dispatch(setDisplayMenu())}>+</div>
                 <div className='header__nav__burger-button'>
                     <Burger />
+                </div>
+                <div className='header__nav__darkmode-toggle'>
+                    <ToggleButton isOn={darkMode} handleToggle={ ()=> dispatch(setDarkMode())} />
                 </div>
                 {/* <div className='header__nav__languages-container'>
                     <img className='header__nav__languages-container__flag' src={ukFlag} onClick={() => dispatch(selectLanguage('english'))}/>

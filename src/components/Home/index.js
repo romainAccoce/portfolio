@@ -1,5 +1,5 @@
 import './home.scss';
-import Button from '../Button';
+import { Link } from 'react-scroll';
 
 const Home = () => {
 
@@ -13,8 +13,13 @@ const Home = () => {
             </div>
             <p className='home__text-container__tech'>Front End developer / React expert</p>
         </div>
-        <div className='home__button'>
-          <Button name='Contact me' size={'large'} link='/contact' />
+        {/* Due to the presence of the Link component I cannot use the generic button component, the classname 'button' apply the generic component style anyway*/}
+        <div className='button home__button'>
+          <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+          >Contact me</Link>
         </div>
     </div>
   );

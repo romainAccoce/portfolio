@@ -1,6 +1,7 @@
 import './app.scss';
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { useSelector } from 'react-redux';
 import AOS from "aos";
 
 import Header from '../Header';
@@ -11,6 +12,7 @@ import Contact from "../Contact";
 import BackToTopButton from '../BackToTopButton';
 
 const App = () => {
+  const { darkMode } = useSelector((state) => state.displayOptions);
 
   useEffect(() => {
     AOS.init({duration: 1000});
@@ -18,7 +20,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="app">
+    <div className={ !darkMode ? "app" : "app app--darkmode" }  >
       <Header />
       <BackToTopButton />
       <div className='app__sections'>

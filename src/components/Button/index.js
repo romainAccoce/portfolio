@@ -10,10 +10,10 @@ Generic button params:
 - size: define text size (small, medium or large)
 */
 
-const Button = ({name, link, dark, size}) => {
+const Button = ({name, link, size}) => {
 
     return (
-        <div className={dark ? 'button button--dark' : 'button'}>
+        <div className='button'>
             <a className={`button__link button__link--${size}`} href={link}>{name}</a>
         </div>
     );
@@ -23,12 +23,10 @@ Button.propTypes = {
   name: PropTypes.string.isRequired,
   link: PropTypes.string,
   size: PropTypes.string,
-  dark: PropTypes.bool,
 };
 
 Button.defaultProps = {
     link: '',
-    dark: false,
     size: 'medium',
 };
 

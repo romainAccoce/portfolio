@@ -1,7 +1,8 @@
 // import { DISPLAY_RULES_MODAL } from "../action/displayOptions";
-import { SELECT_LANGUAGE, SET_CURRENT_CARD, SET_DISPLAY_MENU, SET_DISPLAY_SUCCESS_MODAL, SET_SCROLL_TO_TOP_BUTTON } from "../actions/displayOptions";
+import { SELECT_LANGUAGE, SET_CURRENT_CARD, SET_DISPLAY_MENU, SET_DISPLAY_SUCCESS_MODAL, SET_SCROLL_TO_TOP_BUTTON, SET_DARKMODE } from "../actions/displayOptions";
 
 const initialState = {
+  darkMode: true,
   language: 'english',
   currentCard: ' ',
   displayMenu: false,
@@ -11,6 +12,11 @@ const initialState = {
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
+    case  SET_DARKMODE:
+      return {
+        ...state,
+        darkMode: !state.darkMode,
+      };
     case  SELECT_LANGUAGE:
       return {
         ...state,

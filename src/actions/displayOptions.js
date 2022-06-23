@@ -6,6 +6,13 @@ export const selectLanguage = (value) => (
   }
 );
 
+export const SET_DARKMODE = 'SET_DARKMODE';
+export const setDarkMode = () => (
+  {
+    type: SET_DARKMODE,
+  }
+);
+
 export const SET_CURRENT_CARD = "SET_CURRENT_CARD";
 export const setCurrentCard = (value) => (
   {

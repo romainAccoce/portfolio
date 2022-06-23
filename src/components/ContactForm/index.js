@@ -30,7 +30,9 @@ const ContactForm = () => {
       <input data-aos="fade-up" className='form__input form__input__email' type="email" name="user_email" placeholder='Email' required />
       <input data-aos="fade-up" className='form__input form__input__subject' type="text" name="subject" placeholder='Subject' required />
       <textarea data-aos="fade-up" className='form__input form__input__message' name="message" placeholder='Message' required />
-      <input data-aos="fade-up" className='form__submit button' type="submit" value="Send message" />
+      <div data-aos="fade-up" className='form__submit'>
+        <input className='button' type="submit" value="Send message" />
+      </div>
     </form>
   );
 };

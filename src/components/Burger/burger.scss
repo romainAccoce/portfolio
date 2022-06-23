@@ -1,6 +1,7 @@
 @use "../../styles/vars";
 
 .burger {
+    opacity: 0;
 
     &--active {
         opacity: 0;

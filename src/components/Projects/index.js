@@ -29,7 +29,7 @@ const Projects = () => {
                             </div>
                             <p className='projects__container__project-card__content__description'>{project.description}</p>
                             <div className='projects__container__project-card__content__links'>
-                                <Button name="Go to website" link={project.url} dark={true}/>
+                                <Button name="Go to website" link={project.url} />
                                 <a className='projects__container__project-card__content__links__github' href={project.githubLink}>Source code</a>
                             </div>
                         </div>

@@ -68,46 +68,60 @@
     &__list {
       display: flex;
       flex-direction: column;
-      &__item {
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        transition: all .3s;
-        animation: .3 fade-out forwards;
-        opacity: 1;
-        transform: translateX(-100%);
 
-        &.active-link {
-          color: vars.$hover-text;
-        }
+      &__item {
+        transition: all .3s;
 
         &:hover {
-          color: vars.$hover-text;
-          cursor: pointer;
-        }
+            transform: translateX(.1rem);
+          }
 
-        &--home-active {
-          animation: 
-          1s translate-right forwards,
-          .3s fade-in forwards;
-        }
-        &--projects-active {
-          animation:
-          1s translate-right .1s forwards,
-          .3s fade-in .1s forwards;
-        }
-        
-        &--about-active {
-          animation:
-          1s translate-right .2s forwards,
-          .3s fade-in .2s forwards;
-        }
-        
-        &--contact-active {
-          animation:
-          1s translate-right .3s forwards,
-          .3s fade-in .3s forwards;
-        }
+          &__link {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            transition: all .3s;
+            animation: .3 fade-out forwards;
+            opacity: 1;
+            transform: translateX(-100%);
+    
+            &:hover {
+              color: vars.$hover-text;
+              cursor: pointer;
+            }
+            
+            &.active-link {
+              color: vars.$hover-text;
+              
+              &:hover {
+                cursor: default;
+              }
+            }
+    
+    
+            &--home-active {
+              animation: 
+              1s translate-right forwards,
+              .3s fade-in forwards;
+            }
+            &--projects-active {
+              animation:
+              1s translate-right .1s forwards,
+              .3s fade-in .1s forwards;
+            }
+            
+            &--about-active {
+              animation:
+              1s translate-right .2s forwards,
+              .3s fade-in .2s forwards;
+            }
+            
+            &--contact-active {
+              animation:
+              1s translate-right .3s forwards,
+              .3s fade-in .3s forwards;
+            }
+          }
       }
     }
 

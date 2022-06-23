@@ -26,9 +26,9 @@ const Header = () => {
                     <img className='header__nav__languages-container__flag' src={frenchFlag} onClick={() => dispatch(selectLanguage('french'))} />
                 </div> */}
                 <ul className='header__nav__list'>
-                    <li>
+                    <li className='header__nav__list__item'>
                         <Link
-                            className={ displayMenu ? 'header__nav__list__item header__nav__list__item--home-active' : 'header__nav__list__item' }
+                            className={ displayMenu ? 'header__nav__list__item__link header__nav__list__item__link--home-active' : 'header__nav__list__item__link' }
                             activeClass="active-link"
                             to="home"
                             spy={true}
@@ -36,9 +36,9 @@ const Header = () => {
                             duration={500}
                         >{language==='english' ? 'Home' : 'Accueil'}</Link>
                     </li>
-                    <li>
+                    <li className='header__nav__list__item'>
                         <Link
-                            className={ displayMenu ? 'header__nav__list__item header__nav__list__item--projects-active' : 'header__nav__list__item' }
+                            className={ displayMenu ? 'header__nav__list__item__link header__nav__list__item__link--projects-active' : 'header__nav__list__item__link' }
                             activeClass="active-link"
                             to="projects"
                             spy={true}
@@ -46,9 +46,9 @@ const Header = () => {
                             duration={500}
                         >{language==='english' ? 'Projects' : 'Projets'}</Link>
                     </li>
-                    <li>
+                    <li className='header__nav__list__item'>
                         <Link
-                            className={ displayMenu ? 'header__nav__list__item header__nav__list__item--about-active' : 'header__nav__list__item' }
+                            className={ displayMenu ? 'header__nav__list__item__link header__nav__list__item__link--about-active' : 'header__nav__list__item__link' }
                             activeClass="active-link"
                             to="about"
                             spy={true}
@@ -57,9 +57,9 @@ const Header = () => {
                         >{language==='english' ? 'About' : 'A propos'}</Link>
                     </li>
 
-                    <li>
+                    <li className='header__nav__list__item'>
                         <Link
-                            className={ displayMenu ? 'header__nav__list__item header__nav__list__item--contact-active' : 'header__nav__list__item' }
+                            className={ displayMenu ? 'header__nav__list__item__link header__nav__list__item__link--contact-active' : 'header__nav__list__item__link' }
                             activeClass="active-link"
                             to="contact"
                             spy={true}

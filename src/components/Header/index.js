@@ -8,8 +8,6 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ToggleButton from '../ToggleButton';
-import frenchFlag from '../../assets/images/Flag_of_France.png';
-import ukFlag from '../../assets/images/Flag_of_Great_Britain.png';
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -23,8 +21,12 @@ const Header = () => {
                     <Burger />
                 </div>
                 <div className={ displayMenu ? 'header__nav__darkmode-toggle header__nav__darkmode-toggle--active' : 'header__nav__darkmode-toggle' } >
-                    <ToggleButton isOn={darkMode} handleToggle={ ()=> dispatch(setDarkMode())} />
+                    <ToggleButton isOn={darkMode} handleToggle={ ()=> dispatch(setDarkMode())} role={'set-darkmode'} />
                 </div>
+                {/* <div className={ displayMenu ? 'header__nav__language-toggle header__nav__language-toggle--active' : 'header__nav__language-toggle' } >
+                    <ToggleButton isOn={darkMode} handleToggle={ ()=> dispatch(setDarkMode())}  role={'set-language'}/>
+                </div> */}
+
                 {/* <div className='header__nav__languages-container'>
                     <img className='header__nav__languages-container__flag' src={ukFlag} onClick={() => dispatch(selectLanguage('english'))}/>
                     <img className='header__nav__languages-container__flag' src={frenchFlag} onClick={() => dispatch(selectLanguage('french'))} />

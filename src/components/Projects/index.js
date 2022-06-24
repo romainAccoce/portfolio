@@ -12,7 +12,7 @@ const Projects = () => {
 
     return (
         <div className='projects' id='projects'>
-            <h2 data-aos='fade-right'>My work</h2>
+            <h2 data-aos='fade-right' className='projects__title'>My work</h2>
             <div  className='projects__container'>
             {
                 projectsDatas.map((project, index) => (

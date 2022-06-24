@@ -4,12 +4,7 @@
   position: fixed;
   left: 0;
   bottom: 0;
-
-  &__logo {
-    font-weight: bold;
-    font-size: 3.5rem;
-    background-color: vars.$dark-background;
-  }
+  z-index: 2;
   
   &__nav {
     color: vars.$light-text;
@@ -17,21 +12,19 @@
     background-color: vars.$nav-background;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
     transform: translateX(-100%);
     transition: all .3s;
     position: relative;
-    padding: 1.5 * vars.$gutter;
+    padding: 4 * vars.$gutter 1.5 * vars.$gutter ;
 
     &--active {
       transform: translateX(0);
     }
 
     &__darkmode-toggle {
-      position: absolute;
-      top: 4 * vars.$gutter;
       animation: .3 fade-out forwards;
       opacity: 1;
       transform: translateX(-100%);
@@ -39,19 +32,6 @@
       &--active {
         animation: 1s translate-right forwards,
         .3s fade-in forwards;
-      }
-    }
-
-    &__language-toggle {
-      position: absolute;
-      top: 6 * vars.$gutter;
-      animation: .3 fade-out forwards;
-      opacity: 1;
-      transform: translateX(-100%);
-
-      &--active {
-        animation: 1s translate-right forwards,
-          .3s fade-in forwards;
       }
     }
 
@@ -80,16 +60,6 @@
       right: -4rem;
       top: 0;
     }
-
-
-    // &__languages-container {
-    //   display: flex;
-    //   gap: 1rem;
-
-    //   &__flag {
-    //     width: 2rem;
-    //   }
-    // }
 
     &__list {
       display: flex;
@@ -158,8 +128,6 @@
       animation: .3 fade-out forwards;
       opacity: 1;
       transform: translateX(-100%);
-      position: absolute;
-      bottom: 2 * vars.$gutter;
 
       &--active {
         animation: 1s translate-right forwards,

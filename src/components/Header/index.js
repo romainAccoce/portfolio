@@ -1,6 +1,6 @@
 import './header.scss';
 import Burger from '../Burger';
-import { selectLanguage, setDisplayMenu, setDarkMode } from '../../actions/displayOptions';
+import { setDisplayMenu, setDarkMode } from '../../actions/displayOptions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-scroll";
 import {
@@ -11,7 +11,7 @@ import ToggleButton from '../ToggleButton';
 
 const Header = () => {
     const dispatch = useDispatch();
-    const { language, displayMenu, darkMode } = useSelector((state) => state.displayOptions);
+    const { displayMenu, darkMode } = useSelector((state) => state.displayOptions);
 
     return (
         <div className="header">
@@ -23,14 +23,6 @@ const Header = () => {
                 <div className={ displayMenu ? 'header__nav__darkmode-toggle header__nav__darkmode-toggle--active' : 'header__nav__darkmode-toggle' } >
                     <ToggleButton isOn={darkMode} handleToggle={ ()=> dispatch(setDarkMode())} role={'set-darkmode'} />
                 </div>
-                {/* <div className={ displayMenu ? 'header__nav__language-toggle header__nav__language-toggle--active' : 'header__nav__language-toggle' } >
-                    <ToggleButton isOn={darkMode} handleToggle={ ()=> dispatch(setDarkMode())}  role={'set-language'}/>
-                </div> */}
-
-                {/* <div className='header__nav__languages-container'>
-                    <img className='header__nav__languages-container__flag' src={ukFlag} onClick={() => dispatch(selectLanguage('english'))}/>
-                    <img className='header__nav__languages-container__flag' src={frenchFlag} onClick={() => dispatch(selectLanguage('french'))} />
-                </div> */}
                 <ul className='header__nav__list'>
                     <li className='header__nav__list__item'>
                         <Link
@@ -40,7 +32,7 @@ const Header = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
-                        >{language==='english' ? 'Home' : 'Accueil'}</Link>
+                        >Home</Link>
                     </li>
                     <li className='header__nav__list__item'>
                         <Link
@@ -50,7 +42,7 @@ const Header = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
-                        >{language==='english' ? 'Projects' : 'Projets'}</Link>
+                        >Projets</Link>
                     </li>
                     <li className='header__nav__list__item'>
                         <Link
@@ -60,7 +52,7 @@ const Header = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
-                        >{language==='english' ? 'About' : 'A propos'}</Link>
+                        >About</Link>
                     </li>
 
                     <li className='header__nav__list__item'>

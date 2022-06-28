@@ -73,9 +73,74 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
+  .home {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 2 * vars.$gutter;
+    overflow: hidden;
+    transform: translateX(-10%);
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2 * vars.$gutter;
+
+      &__title {
+        opacity: 0;
+        transform: translateX(-5%);
+        animation: 3s fade-in .5s forwards,
+          1s slide-right .5s forwards;
+        font-weight: bold;
+        font-size: 6rem;
+        letter-spacing: .4rem;
+        font-family: "Roboto",
+          sans-serif;
+      }
+
+      &__tech {
+        opacity: 0;
+        font-size: 1.5rem;
+        letter-spacing: .2rem;
+        color: grey;
+        margin-top: vars.$gutter;
+        border-right: .15em solid vars.$highlight-text;
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 0;
+        animation:
+          typing 3s steps(50, end) forwards 1.5s,
+          .75s fade-in 1.5s forwards,
+          blinking .75s ease;
+
+        @keyframes typing {
+          from {
+            width: 0
+          }
+
+          to {
+            width: 31rem;
+          }
+        }
+      }
+
+      &__button {
+        opacity: 0;
+        margin-top: 2 * vars.$gutter;
+        animation:
+          3s fade-in 4.5s forwards,
+          1s slide-right 4.5s forwards;
+        transform: translateX(-101%);
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 
-@media screen and (min-width: 767px) {
-
-}
-
+@media screen and (min-width: 767px) {}

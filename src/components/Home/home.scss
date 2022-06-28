@@ -1,16 +1,18 @@
 @use "../../styles/vars";
 
 .home {
+  width: 80%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: auto;
   gap: 2 * vars.$gutter;
   overflow: hidden;
   transform: translateX(-10%);
-  height: 100vh;
-
-  &__text-container {
+  
+  &__content {
     display: flex;
     flex-direction: column;
     gap: 0.2 * vars.$gutter;
@@ -23,7 +25,6 @@
       font-weight: bold;
       font-size: 6rem;
       letter-spacing: .4rem;
-      // color: vars.$dark-text;
       font-family: "Roboto",
       sans-serif;
     }
@@ -33,7 +34,7 @@
       font-size: 1.5rem;
       letter-spacing: .2rem;
       color: grey;
-      margin-top: 2 * vars.$gutter;
+      margin-top: vars.$gutter;
       border-right: .15em solid vars.$highlight-text;
       display: inline-block;
       overflow: hidden;
@@ -54,15 +55,17 @@
         }
       }
     }
-  }
 
-  &__button {
-    margin-right: auto;
-    margin-top: 1rem;
-    animation: 3s fade-in 4.5s ease, 1s slide-right 4.5s forwards;
-    transform: translateX(-101%);
-    font-weight: bold;
-    font-size: 1.5rem;
+    &__button {
+      opacity: 0;
+      margin-top: 2 * vars.$gutter;
+      animation: 
+        3s fade-in 4.5s forwards, 
+        1s slide-right 4.5s forwards;
+      transform: translateX(-101%);
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
   }
 }
 

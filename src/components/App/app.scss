@@ -1,22 +1,30 @@
 @use "../../styles/_vars.scss";
 
-.app {
-  display: flex;
-  min-height: 100vh;
+@media screen and (min-width: 1024px) {
 
-  &--darkmode {
-    background-color: vars.$dark-background;
-    color: vars.$light-text;
-  }
-
-  &__sections {
+  .app {
     display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin-left: auto;
+    min-height: 100vh;
+  
+    &--darkmode {
+      background-color: vars.$dark-background;
+      color: vars.$light-text;
+    }
+  
+    &__sections {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin-left: auto;
+    }
+  }
+  
+  .highlight-text {
+    color: vars.$highlight-text;
   }
 }
 
-.highlight-text {
-  color: vars.$highlight-text;
-}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {}
+
+@media screen and (min-width: 767px) {}

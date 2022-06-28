@@ -1,31 +1,39 @@
 @use "../../styles/vars";
 
-.button {
-    border: solid .15rem vars.$highlight-text;
-    font-weight: bold;
-    color: vars.$highlight-text;
-    padding: 0.5 * vars.$gutter;
-    background: linear-gradient(to right, vars.$highlight-text 0%, vars.$highlight-text 50%, vars.$transparent-background 50%, vars.$transparent-background 100%);
-    background-size: 200% 100%;
-    background-position: 100% 0;
-    transition: all 0.3s;
-    width: fit-content;
+@media screen and (min-width: 1024px) {
 
-    &:hover {
-        background-position: 0 0;
-        color: vars.$light-text;
-        cursor: pointer;
-    }
-
-    &__link {
-        &--small {
-            font-size: .8rem;
+    .button {
+        border: solid .15rem vars.$highlight-text;
+        font-weight: bold;
+        color: vars.$highlight-text;
+        padding: 0.5 * vars.$gutter;
+        background: linear-gradient(to right, vars.$highlight-text 0%, vars.$highlight-text 50%, vars.$transparent-background 50%, vars.$transparent-background 100%);
+        background-size: 200% 100%;
+        background-position: 100% 0;
+        transition: all 0.3s;
+        width: fit-content;
+    
+        &:hover {
+            background-position: 0 0;
+            color: vars.$light-text;
+            cursor: pointer;
         }
-        &--medium {
-            font-size: 1rem;
-        }
-        &--large {
-            font-size: 1.5rem;
+    
+        &__link {
+            &--small {
+                font-size: .8rem;
+            }
+            &--medium {
+                font-size: 1rem;
+            }
+            &--large {
+                font-size: 1.5rem;
+            }
         }
     }
 }
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {}
+
+@media screen and (min-width: 767px) {}

@@ -1,19 +1,27 @@
 @use "../../styles/vars";
 
-.burger {
-    opacity: 0;
+@media screen and (min-width: 1024px) {
 
-    &--active {
+    .burger {
         opacity: 0;
-        color: vars.$highlight-text;
-        font-size: 4rem;
-        line-height: .6rem;
-        animation: .3s fade-in forwards;
-        transition: all .3s;
-
-        &:hover {
-            transform: translateX(0.2rem);
-            cursor: pointer;
+    
+        &--active {
+            opacity: 0;
+            color: vars.$highlight-text;
+            font-size: 4rem;
+            line-height: .6rem;
+            animation: .3s fade-in forwards;
+            transition: all .3s;
+    
+            &:hover {
+                transform: translateX(0.2rem);
+                cursor: pointer;
+            }
         }
     }
 }
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {}
+
+@media screen and (min-width: 767px) {}

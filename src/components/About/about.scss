@@ -36,6 +36,135 @@
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
-@media screen and (min-width: 767px) {}
+    .about {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: vars.$gutter;
+            padding: vars.$gutter;
+
+            &__text {
+                font-size: 1.8rem;
+                text-align: justify;
+            }
+
+        }
+
+        &__image {
+            object-fit: cover;
+            width: 90%;
+            height: auto;
+            align-self: center;
+            padding-top: 2 * vars.$gutter;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about {
+            display: flex;
+            min-height: 100vh;
+            max-height: 100vh;
+    
+            &__content {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 2 * vars.$gutter;
+                padding: 4 * vars.$gutter;
+    
+                &__title {
+                    min-width: 100%;
+                }
+    
+                &__text {
+                    font-size: 1.2rem;
+                    text-align: justify;
+                }
+    
+            }
+    
+            &__image {
+                object-fit: cover;
+                width: 40%;
+                height: 90%;
+                margin: auto;
+            }
+        }
+    }
+    
+    
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+        .about {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: vars.$gutter;
+            padding: .5 * vars.$gutter;
+
+            &__text {
+                font-size: 1.8rem;
+                text-align: justify;
+            }
+
+        }
+
+        &__image {
+            object-fit: cover;
+            width: 90%;
+            height: auto;
+            align-self: center;
+            padding-top: 2 * vars.$gutter;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin-top: 2 * vars.$gutter;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            gap: vars.$gutter;
+            padding: .5 * vars.$gutter;
+
+            &__title {
+                font-size: 4rem;
+            }
+
+            &__text {
+                font-size: 1rem;
+                text-align: justify;
+            }
+        }
+
+        &__image {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            align-self: center;
+            padding-top: 2 * vars.$gutter;
+        }
+    }
+}

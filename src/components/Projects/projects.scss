@@ -70,6 +70,11 @@
                         margin-left: auto;
                         margin-top: -6 * vars.$gutter;
                     }
+
+                    &__description {
+                        text-align: justify;
+                    }
+
                     &__links {
                         display: flex;
                         gap: 2rem;
@@ -93,6 +98,206 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
-@media screen and (min-width: 767px) {}
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 3 * vars.$gutter;
+        min-height: 100vh;
+        padding: .5 * vars.$gutter;
+
+        &__title {
+            padding: 0rem .5 * vars.$gutter;
+        }
+
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            &__project-card {
+                background-color: vars.$nav-background;
+                width: 23.5rem;
+                height: 23.5rem;
+                position: relative;
+
+                &__image {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    object-fit: cover;
+                    transition: width .3s, height .3s, top .3s, left .3s;
+                    z-index: 1;
+
+                    &--current {
+                        top: vars.$gutter;
+                        left: vars.$gutter;
+                        width: 30%;
+                        height: 30%;
+                    }
+                }
+
+                &__content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 2 * vars.$gutter;
+                    color: vars.$light-text;
+                    padding: vars.$gutter;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 0;
+
+                    &__title {
+                        margin-left: auto;
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        width: 60%;
+                        text-align: center;
+                    }
+
+                    &__techs {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: .5 * vars.$gutter;
+                        width: 60%;
+                        text-align: center;
+                        margin-left: auto;
+                        margin-top: -6 * vars.$gutter;
+                    }
+
+                    &__description {
+                        text-align: justify;
+                    }
+
+                    &__links {
+                        display: flex;
+                        gap: 2rem;
+                        justify-content: space-evenly;
+                        color: vars.$highlight-text;
+                        font-weight: bold;
+
+                        &__github {
+                            padding: 0.5 * vars.$gutter;
+                            transition: all 0.3s;
+
+                            &:hover {
+                                transform: translateY(.1rem);
+                                color: vars.$light-text;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2 * vars.$gutter;
+        min-height: 100vh;
+
+        &__title {
+            font-size: 4rem;
+        }
+
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            &__project-card {
+                background-color: vars.$nav-background;
+                width: 25rem;
+                height: 25rem;
+                position: relative;
+
+                &__image {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    object-fit: cover;
+                    transition: width .3s, height .3s, top .3s, left .3s;
+                    z-index: 1;
+
+                    &--current {
+                        top: vars.$gutter;
+                        left: vars.$gutter;
+                        width: 30%;
+                        height: 30%;
+                    }
+                }
+
+                &__content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 2 * vars.$gutter;
+                    color: vars.$light-text;
+                    padding: vars.$gutter;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 0;
+
+                    &__title {
+                        margin-left: auto;
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        width: 60%;
+                        text-align: center;
+                    }
+
+                    &__techs {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: .5 * vars.$gutter;
+                        width: 60%;
+                        text-align: center;
+                        margin-left: auto;
+                        margin-top: -6 * vars.$gutter;
+                    }
+
+                    &__description {
+                        text-align: justify;
+                    }
+
+                    &__links {
+                        display: flex;
+                        gap: 2rem;
+                        justify-content: space-evenly;
+                        color: vars.$highlight-text;
+                        font-weight: bold;
+
+                        &__github {
+                            padding: 0.5 * vars.$gutter;
+                            transition: all 0.3s;
+
+                            &:hover {
+                                transform: translateY(.1rem);
+                                color: vars.$light-text;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

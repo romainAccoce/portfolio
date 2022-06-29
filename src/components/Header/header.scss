@@ -5,6 +5,7 @@
   .header {
     z-index: 2;
     color: vars.$light-text;
+    position: fixed;
     
     &__nav {
       min-height: 100vh;

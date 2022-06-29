@@ -16,7 +16,14 @@ const Projects = () => {
             <div  className='projects__container'>
             {
                 projectsDatas.map((project, index) => (
-                    <div data-aos='zoom-in-up' data-aos-delay={300 * index} className='projects__container__project-card' key={project.url} onMouseOver={() => dispatch(setCurrentCard(project.name))} onMouseLeave={() => dispatch(setCurrentCard(""))}>
+                    <div data-aos='zoom-in-up' 
+                        data-aos-delay={300 * index}
+                        className='projects__container__project-card'
+                        key={project.url}
+                        onMouseOver={() => dispatch(setCurrentCard(project.name))}
+                        onMouseLeave={() => dispatch(setCurrentCard(""))}
+                        onClick={() => dispatch(setCurrentCard(project.name))}
+                        >
                         <img alt='project image' className={ currentCard === project.name ? 'projects__container__project-card__image projects__container__project-card__image--current' : 'projects__container__project-card__image'} src={project.image}/>
                         <div className='projects__container__project-card__content'>
                             <h3 className='projects__container__project-card__content__title'>{project.name}</h3>

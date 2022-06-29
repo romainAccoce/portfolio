@@ -106,7 +106,6 @@
         justify-content: flex-start;
         gap: 3 * vars.$gutter;
         min-height: 100vh;
-        padding: .5 * vars.$gutter;
 
         &__title {
             padding: 0rem .5 * vars.$gutter;
@@ -120,8 +119,8 @@
 
             &__project-card {
                 background-color: vars.$nav-background;
-                width: 23.5rem;
-                height: 23.5rem;
+                width: 24rem;
+                height: 24rem;
                 position: relative;
 
                 &__image {

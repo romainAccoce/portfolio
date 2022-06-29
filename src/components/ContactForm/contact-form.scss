@@ -60,19 +60,11 @@
             padding: 1rem;
             border: none;
             font-family: "Nunito", sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             background-color: vars.$light-grey;
 
             &:focus {
                 border-bottom: 2px solid vars.$highlight-text;
-            }
-
-            &__name {
-                width: 49.47%;
-            }
-
-            &__email {
-                width: 49.47%;
             }
 
             &__message {
@@ -87,9 +79,9 @@
         }
 
         &__submit {
-            margin-left: auto;
             margin-top: .5 * vars.$gutter;
-            font-size: 1rem;
+            font-size: 1.5rem;
+            align-self: center;
         }
     }
 }
@@ -113,14 +105,6 @@
                 border-bottom: 2px solid vars.$highlight-text;
             }
 
-            &__name {
-                width: 49.47%;
-            }
-
-            &__email {
-                width: 49.47%;
-            }
-
             &__message {
                 height: 10rem;
                 resize: none;
@@ -129,13 +113,12 @@
                     outline: none;
                 }
             }
-
         }
 
         &__submit {
-            margin-left: auto;
             margin-top: .5 * vars.$gutter;
-            font-size: 1rem;
+            font-size: 1.2rem;
+            align-self: center;
         }
     }
 }

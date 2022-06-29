@@ -1,44 +1,36 @@
 @use "../../styles/vars";
 
-@media screen and (min-width: 1024px) {
+.scroll {
+    color: vars.$highlight-text;
+    font-size: 2rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1;
+    transition: all .3s;
 
-    .scroll {
-        color: vars.$highlight-text;
-        font-size: 2rem;
-        position: fixed;
-        z-index: 1;
-        bottom: 2rem;
-        right: 2rem;
-        transition: all .3s;
-    
-        &--reverse {
-            transform: rotate(180deg);
-        }
-    
-        &__to-top {
-            border: .15rem solid vars.$highlight-text;
-            border-radius: 50%;
-            width: 3rem;
-            height: 3rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-    
-            &:hover{
-                cursor: pointer;
-                background-color: vars.$highlight-text;
-                color: vars.$light-text;
-                transform: translateY(-0.1rem);
-            }
-        }
-    
-        &__to-bottom {
-            animation: 1s bounce-down infinite;
+    &--reverse {
+        transform: rotate(180deg);
+    }
+
+    &__to-top {
+        border: .15rem solid vars.$highlight-text;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+            cursor: pointer;
+            background-color: vars.$highlight-text;
+            color: vars.$light-text;
+            transform: translateY(-0.1rem);
         }
     }
+
+    &__to-bottom {
+        animation: 1s bounce-down infinite;
+    }
 }
-
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {}
-
-@media screen and (min-width: 767px) {}

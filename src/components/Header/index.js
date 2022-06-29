@@ -32,6 +32,7 @@ const Header = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
+                            onClick={() => dispatch(setDisplayMenu())}
                         >Home</Link>
                     </li>
                     <li className='header__nav__list__item'>
@@ -42,6 +43,7 @@ const Header = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
+                            onClick={() => dispatch(setDisplayMenu())}
                         >Projets</Link>
                     </li>
                     <li className='header__nav__list__item'>
@@ -52,6 +54,7 @@ const Header = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
+                            onClick={() => dispatch(setDisplayMenu())}
                         >About</Link>
                     </li>
 
@@ -63,6 +66,7 @@ const Header = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
+                            onClick={() => dispatch(setDisplayMenu())}
                         >Contact</Link>
                     </li>
                 </ul>

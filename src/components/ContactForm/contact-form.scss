@@ -98,7 +98,7 @@
             padding: 1rem;
             border: none;
             font-family: "Nunito", sans-serif;
-            font-size: 1.2rem;
+            font-size: 1rem;
             background-color: vars.$light-grey;
 
             &:focus {
@@ -117,7 +117,7 @@
 
         &__submit {
             margin-top: .5 * vars.$gutter;
-            font-size: 1.2rem;
+            font-size: 1rem;
             align-self: center;
         }
     }

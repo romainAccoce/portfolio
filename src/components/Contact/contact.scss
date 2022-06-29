@@ -67,12 +67,12 @@
         display: flex;
         flex-direction: column;
         padding: .5 * vars.$gutter;
-        margin-top: 4 * vars.$gutter;
+        margin-top: 18 * vars.$gutter;
 
         &__content {
             display: flex;
             flex-direction: column;
-            gap: 3 * vars.$gutter;
+            gap: vars.$gutter;
             text-align: justify;
 
             &__title {
@@ -80,7 +80,7 @@
             }
 
             &__text {
-                font-size: 1.5rem;
+                font-size: 1rem;
                 line-height: 1.2rem;
             }
         }

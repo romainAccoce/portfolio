@@ -151,25 +151,25 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .header {
-    z-index: 2;
+    z-index: 3;
     color: vars.$light-text;
     position: fixed;
 
     &__nav {
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      background-color: vars.$nav-background;
       font-size: 2rem;
-      transform: translateX(-100%);
-      transition: all .3s;
-      position: relative;
-      padding: 4 * vars.$gutter 1.5 * vars.$gutter;
-
+      
       &--active {
+        transform: translateX(-100%);
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: vars.$nav-background;
+        transition: all .3s;
+        position: relative;
+        padding: 4 * vars.$gutter 1.5 * vars.$gutter;
         transform: translateX(0);
       }
 
@@ -185,6 +185,7 @@
       }
 
       &__close-button {
+        display: none;
         color: vars.$light-text;
         font-size: 4rem;
         position: absolute;
@@ -193,6 +194,7 @@
         transition: all .3s;
 
         &--active {
+          display: block;
           transform: rotate(45deg);
 
           &:hover {
@@ -205,8 +207,8 @@
       }
 
       &__burger-button {
-        position: absolute;
-        right: -95%;
+        position: fixed;
+        right: 2 * vars.$gutter;
         top: 0;
         font-size: 2rem;
       }
@@ -302,26 +304,26 @@
 
 @media screen and (max-width: 767px) {
   .header {
-    z-index: 2;
+    z-index: 3;
     color: vars.$light-text;
     position: fixed;
     
     &__nav {
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      background-color: vars.$nav-background;
-      font-size: 1rem;
-      transform: translateX(-100%);
-      transition: all .3s;
-      position: relative;
-      padding: 4 * vars.$gutter 1.5 * vars.$gutter;
 
       &--active {
+        transform: translateX(-100%);
         transform: translateX(0);
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: vars.$nav-background;
+        font-size: 1rem;
+        transition: all .3s;
+        position: relative;
+        padding: 4 * vars.$gutter 1.5 * vars.$gutter;
       }
 
       &__darkmode-toggle {
@@ -336,6 +338,7 @@
       }
 
       &__close-button {
+        display: none;
         color: vars.$light-text;
         font-size: 2.5rem;
         position: absolute;
@@ -344,6 +347,7 @@
         transition: all .3s;
 
         &--active {
+          display: block;
           transform: rotate(45deg);
 
           &:hover {
@@ -356,9 +360,9 @@
       }
 
       &__burger-button {
-        position: absolute;
-        right: -95%;
+        position: fixed;
         top: 0;
+        right: 2 * vars.$gutter;
         font-size: 2rem;
       }
 

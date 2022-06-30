@@ -27,7 +27,7 @@
   
       &__darkmode-toggle {
         animation: .3 fade-out forwards;
-        opacity: 1;
+        opacity: 0;
         transform: translateX(-100%);
   
         &--active {
@@ -79,7 +79,7 @@
               flex-direction: column;
               transition: all .3s;
               animation: .3 fade-out forwards;
-              opacity: 1;
+              opacity: 0;
               transform: translateX(-100%);
       
               &:hover {
@@ -127,7 +127,7 @@
         justify-content: space-evenly;
         transition: all .3s;
         animation: .3 fade-out forwards;
-        opacity: 1;
+        opacity: 0;
         transform: translateX(-100%);
   
         &--active {
@@ -175,7 +175,7 @@
 
       &__darkmode-toggle {
         animation: .3 fade-out forwards;
-        opacity: 1;
+        opacity: 0;
         transform: translateX(-100%);
 
         &--active {
@@ -230,7 +230,7 @@
             flex-direction: column;
             transition: all .3s;
             animation: .3 fade-out forwards;
-            opacity: 1;
+            opacity: 0;
             transform: translateX(-100%);
 
             &:hover {
@@ -280,7 +280,7 @@
         gap: 1.5 * vars.$gutter;
         transition: all .3s;
         animation: .3 fade-out forwards;
-        opacity: 1;
+        opacity: 0;
         transform: translateX(-100%);
 
         &--active {
@@ -328,7 +328,7 @@
 
       &__darkmode-toggle {
         animation: .3 fade-out forwards;
-        opacity: 1;
+        opacity: 0;
         transform: translateX(-100%);
 
         &--active {
@@ -360,9 +360,9 @@
       }
 
       &__burger-button {
-        position: fixed;
+        position: absolute;
         top: 0;
-        right: 2 * vars.$gutter;
+        right: -290%;
         font-size: 2rem;
       }
 
@@ -383,7 +383,7 @@
             flex-direction: column;
             transition: all .3s;
             animation: .3 fade-out forwards;
-            opacity: 1;
+            opacity: 0;
             transform: translateX(-100%);
 
             &:hover {
@@ -402,25 +402,25 @@
             &--home-active {
               animation:
                 1s translate-right .1s forwards,
-                .3s fade-in forwards;
+                .3s fade-in .1s forwards;
             }
 
             &--projects-active {
               animation:
                 1s translate-right .2s forwards,
-                .3s fade-in .1s forwards;
+                .3s fade-in .2s forwards;
             }
 
             &--about-active {
               animation:
                 1s translate-right .3s forwards,
-                .3s fade-in .2s forwards;
+                .3s fade-in .3s forwards;
             }
 
             &--contact-active {
               animation:
                 1s translate-right .4s forwards,
-                .3s fade-in .3s forwards;
+                .3s fade-in .4s forwards;
             }
           }
         }
@@ -433,7 +433,7 @@
         gap: 1.5 * vars.$gutter;
         transition: all .3s;
         animation: .3 fade-out forwards;
-        opacity: 1;
+        opacity: 0;
         transform: translateX(-100%);
 
         &--active {

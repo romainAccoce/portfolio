@@ -14,7 +14,7 @@ const reducer = (state = initialState, action = {}) => {
     case  SET_DARKMODE:
       return {
         ...state,
-        darkMode: !state.darkMode,
+        darkMode: action.value,
       };
     case SET_CURRENT_CARD:
       return {

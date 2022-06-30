@@ -2,6 +2,7 @@ import './header.scss';
 import Burger from '../Burger';
 import { setDisplayMenu, setDarkMode } from '../../actions/displayOptions';
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import { Link } from "react-scroll";
 import {
   faLinkedinIn, faTwitter, faGithub,
@@ -13,6 +14,22 @@ const Header = () => {
     const dispatch = useDispatch();
     const { displayMenu, darkMode } = useSelector((state) => state.displayOptions);
 
+    useEffect(() => {
+
+        const getDarkModeSetting = localStorage.getItem('darkModeLS');
+        
+        if (getDarkModeSetting === 'true') {
+            dispatch(setDarkMode(true));
+        } else {
+            dispatch(setDarkMode(false));
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('darkModeLS', darkMode);
+    }, [darkMode]);
+
     return (
         <div className="header">
             <nav className={ displayMenu ? 'header__nav header__nav--active' : 'header__nav'} >
@@ -21,7 +38,7 @@ const Header = () => {
                     <Burger />
                 </div>
                 <div className={ displayMenu ? 'header__nav__darkmode-toggle header__nav__darkmode-toggle--active' : 'header__nav__darkmode-toggle' } >
-                    <ToggleButton isOn={darkMode} handleToggle={ ()=> dispatch(setDarkMode())} role={'set-darkmode'} />
+                    <ToggleButton isOn={darkMode} handleToggle={ ()=> dispatch(setDarkMode(!darkMode))} role={'set-darkmode'} />
                 </div>
                 <ul className='header__nav__list'>
                     <li className='header__nav__list__item'>

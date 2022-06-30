@@ -15,6 +15,14 @@ export const projectsDatas = [
         githubLink: 'https://github.com/romainAccoce/rock-paper-scissors',
         image: '/images/rock-paper-scissors-screenshot.png',
     },
+    {
+        name: 'Portfolio',
+        description: 'An eficient way to present my self and my projects, feel free to customise it and use it for your self.',
+        techs: ['React', 'Redux', 'Sass'],
+        url: 'https://romain-accoce-portfolio.surge.sh/',
+        githubLink: 'https://github.com/romainAccoce/portfolio',
+        image: '/images/portfolio-screenshot.png',
+    },
 ]
 
 export const scrollToTop = () => {

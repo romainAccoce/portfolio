@@ -12,10 +12,8 @@ const BackToTopButton = () => {
     useEffect(() => {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
-                console.log('haut')
                 dispatch(setScrollToTopButton(true));
             } else {
-                console.log('bas')
                 dispatch(setScrollToTopButton(false));
             }
         });

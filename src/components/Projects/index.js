@@ -30,7 +30,7 @@ const Projects = () => {
                             <div className='projects__container__project-card__content__techs'>
                                 {
                                     project.techs.map((tech) => (
-                                        <Tag tech={tech}/>
+                                        <Tag tech={tech} key={tech}/>
                                     ))
                                 }
                             </div>

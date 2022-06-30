@@ -91,7 +91,6 @@
         display: flex;
         flex-wrap: wrap;
         gap: .5 * vars.$gutter;
-        min-height: 100vh;
 
         &__input {
             width: 100%;

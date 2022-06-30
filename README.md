@@ -1,6 +1,6 @@
-# Frontend Mentor - Rock, Paper, Scissors solution
+# Portfolio
 
-This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+An eficient way to present my self and my projects, feel free to customise it and use it for your self.
 
 ## Table of contents
 
@@ -19,11 +19,11 @@ My personal portfolio web site, designed to present my projects.
 
 ### Screenshot
 
-![](./public/)
+![](./public/screenshot.png)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://romain-accoce-portfolio.surge.sh/)
 
 ## My process
 
@@ -39,6 +39,6 @@ My personal portfolio web site, designed to present my projects.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Romain Accoce](https://romain-accoce-portfolio.surge.sh/)
+- LinkedIn - [@romain-accoce](https://www.linkedin.com/in/romain-accoce/)
+- Twitter - [@romanocrew](https://twitter.com/romanocrew/)

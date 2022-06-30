@@ -1,5 +1,5 @@
 // import { DISPLAY_RULES_MODAL } from "../action/displayOptions";
-import { SELECT_LANGUAGE, SET_CURRENT_CARD, SET_DISPLAY_MENU, SET_DISPLAY_SUCCESS_MODAL, SET_SCROLL_TO_TOP_BUTTON, SET_DARKMODE } from "../actions/displayOptions";
+import { SET_CURRENT_CARD, SET_DISPLAY_MENU, SET_DISPLAY_SUCCESS_MODAL, SET_SCROLL_TO_TOP_BUTTON, SET_DARKMODE } from "../actions/displayOptions";
 
 const initialState = {
   darkMode: false,

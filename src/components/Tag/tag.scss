@@ -1,0 +1,6 @@
+@use "../../styles/vars";
+
+.tag {
+    color: vars.$highlight-text;
+    font-size: .8rem;
+}

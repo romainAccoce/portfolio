@@ -1,0 +1,456 @@
+@use "../../styles/vars";
+
+@media screen and (min-width: 1024px) {
+
+  .header {
+    z-index: 2;
+    color: vars.$light-text;
+    position: fixed;
+    
+    &__nav {
+      min-height: 100vh;
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background-color: vars.$nav-background;
+      font-size: 1.2rem;
+      transform: translateX(-100%);
+      transition: all .3s;
+      position: relative;
+      padding: 4 * vars.$gutter 1.5 * vars.$gutter ;
+  
+      &--active {
+        transform: translateX(0);
+      }
+  
+      &__darkmode-toggle {
+        animation: .3 fade-out forwards;
+        opacity: 0;
+        transform: translateX(-100%);
+  
+        &--active {
+          animation: 1s translate-right forwards,
+          .3s fade-in forwards;
+        }
+      }
+  
+      &__close-button {
+        color: vars.$light-text;
+        font-size: 2.5rem;
+        position: absolute;
+        top: 0;
+        right: .7 * vars.$gutter;
+        transition: all .3s;
+  
+        &--active {
+          transform: rotate(45deg);
+          
+          &:hover {
+              transform: rotate(45deg);
+              color: vars.$hover-text;
+              cursor: pointer;
+          }
+        }
+  
+      }
+  
+      &__burger-button {
+        position: absolute;
+        right: -4rem;
+        top: 0;
+      }
+  
+      &__list {
+        display: flex;
+        flex-direction: column;
+  
+        &__item {
+          transition: all .3s;
+  
+          &:hover {
+              transform: translateX(.1rem);
+            }
+  
+            &__link {
+              padding: 1rem;
+              display: flex;
+              flex-direction: column;
+              transition: all .3s;
+              animation: .3 fade-out forwards;
+              opacity: 0;
+              transform: translateX(-100%);
+      
+              &:hover {
+                color: vars.$hover-text;
+                cursor: pointer;
+              }
+              
+              &.active-link {
+                color: vars.$hover-text;
+                
+                &:hover {
+                  cursor: default;
+                }
+              }
+      
+              &--home-active {
+                animation: 
+                1s translate-right forwards,
+                .3s fade-in forwards;
+              }
+              &--projects-active {
+                animation:
+                1s translate-right .1s forwards,
+                .3s fade-in .1s forwards;
+              }
+              
+              &--about-active {
+                animation:
+                1s translate-right .2s forwards,
+                .3s fade-in .2s forwards;
+              }
+              
+              &--contact-active {
+                animation:
+                1s translate-right .3s forwards,
+                .3s fade-in .3s forwards;
+              }
+            }
+        }
+      }
+  
+      &__icons-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        transition: all .3s;
+        animation: .3 fade-out forwards;
+        opacity: 0;
+        transform: translateX(-100%);
+  
+        &--active {
+          animation: 1s translate-right forwards,
+          .3s fade-in forwards;
+        }
+  
+        &__icon {
+          transition: all .3s;
+  
+          &:hover {
+            color: vars.$hover-text;
+            transform: translateY(-0.1rem);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    z-index: 3;
+    color: vars.$light-text;
+    position: fixed;
+
+    &__nav {
+      font-size: 2rem;
+      
+      &--active {
+        transform: translateX(-100%);
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: vars.$nav-background;
+        transition: all .3s;
+        position: relative;
+        padding: 4 * vars.$gutter 1.5 * vars.$gutter;
+        transform: translateX(0);
+      }
+
+      &__darkmode-toggle {
+        animation: .3 fade-out forwards;
+        opacity: 0;
+        transform: translateX(-100%);
+
+        &--active {
+          animation: 1s translate-right forwards,
+            .3s fade-in forwards;
+        }
+      }
+
+      &__close-button {
+        display: none;
+        color: vars.$light-text;
+        font-size: 4rem;
+        position: absolute;
+        top: 0;
+        right: vars.$gutter;
+        transition: all .3s;
+
+        &--active {
+          display: block;
+          transform: rotate(45deg);
+
+          &:hover {
+            transform: rotate(45deg);
+            color: vars.$hover-text;
+            cursor: pointer;
+          }
+        }
+
+      }
+
+      &__burger-button {
+        position: fixed;
+        right: 2 * vars.$gutter;
+        top: 0;
+        font-size: 2rem;
+      }
+
+      &__list {
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+          transition: all .3s;
+
+          &:hover {
+            transform: translateX(.1rem);
+          }
+
+          &__link {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            transition: all .3s;
+            animation: .3 fade-out forwards;
+            opacity: 0;
+            transform: translateX(-100%);
+
+            &:hover {
+              color: vars.$hover-text;
+              cursor: pointer;
+            }
+
+            &.active-link {
+              color: vars.$hover-text;
+
+              &:hover {
+                cursor: default;
+              }
+            }
+
+            &--home-active {
+              animation:
+                1s translate-right forwards,
+                .3s fade-in forwards;
+            }
+
+            &--projects-active {
+              animation:
+                1s translate-right .1s forwards,
+                .3s fade-in .1s forwards;
+            }
+
+            &--about-active {
+              animation:
+                1s translate-right .2s forwards,
+                .3s fade-in .2s forwards;
+            }
+
+            &--contact-active {
+              animation:
+                1s translate-right .3s forwards,
+                .3s fade-in .3s forwards;
+            }
+          }
+        }
+      }
+
+      &__icons-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1.5 * vars.$gutter;
+        transition: all .3s;
+        animation: .3 fade-out forwards;
+        opacity: 0;
+        transform: translateX(-100%);
+
+        &--active {
+          animation: 1s translate-right forwards,
+            .3s fade-in forwards;
+        }
+
+        &__icon {
+          transition: all .3s;
+
+          &:hover {
+            color: vars.$hover-text;
+            transform: translateY(-0.1rem);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    z-index: 3;
+    color: vars.$light-text;
+    position: fixed;
+    
+    &__nav {
+
+      &--active {
+        transform: translateX(-100%);
+        transform: translateX(0);
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: vars.$nav-background;
+        font-size: 1rem;
+        transition: all .3s;
+        position: relative;
+        padding: 4 * vars.$gutter 1.5 * vars.$gutter;
+      }
+
+      &__darkmode-toggle {
+        animation: .3 fade-out forwards;
+        opacity: 0;
+        transform: translateX(-100%);
+
+        &--active {
+          animation: 1s translate-right forwards,
+            .3s fade-in forwards;
+        }
+      }
+
+      &__close-button {
+        display: none;
+        color: vars.$light-text;
+        font-size: 2.5rem;
+        position: absolute;
+        top: vars.$gutter;
+        right: vars.$gutter;
+        transition: all .3s;
+
+        &--active {
+          display: block;
+          transform: rotate(45deg);
+
+          &:hover {
+            transform: rotate(45deg);
+            color: vars.$hover-text;
+            cursor: pointer;
+          }
+        }
+
+      }
+
+      &__burger-button {
+        position: absolute;
+        top: 0;
+        right: -290%;
+        font-size: 2rem;
+      }
+
+      &__list {
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+          transition: all .3s;
+
+          &:hover {
+            transform: translateX(.1rem);
+          }
+
+          &__link {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            transition: all .3s;
+            animation: .3 fade-out forwards;
+            opacity: 0;
+            transform: translateX(-100%);
+
+            &:hover {
+              color: vars.$hover-text;
+              cursor: pointer;
+            }
+
+            &.active-link {
+              color: vars.$hover-text;
+
+              &:hover {
+                cursor: default;
+              }
+            }
+
+            &--home-active {
+              animation:
+                1s translate-right .1s forwards,
+                .3s fade-in .1s forwards;
+            }
+
+            &--projects-active {
+              animation:
+                1s translate-right .2s forwards,
+                .3s fade-in .2s forwards;
+            }
+
+            &--about-active {
+              animation:
+                1s translate-right .3s forwards,
+                .3s fade-in .3s forwards;
+            }
+
+            &--contact-active {
+              animation:
+                1s translate-right .4s forwards,
+                .3s fade-in .4s forwards;
+            }
+          }
+        }
+      }
+
+      &__icons-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1.5 * vars.$gutter;
+        transition: all .3s;
+        animation: .3 fade-out forwards;
+        opacity: 0;
+        transform: translateX(-100%);
+
+        &--active {
+          animation: 1s translate-right forwards,
+            .3s fade-in forwards;
+        }
+
+        &__icon {
+          transition: all .3s;
+
+          &:hover {
+            color: vars.$hover-text;
+            transform: translateY(-0.1rem);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

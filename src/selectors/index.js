@@ -4,7 +4,7 @@ export const projectsDatas = [
         description: 'A web platform to share and organize ressources around development.',
         techs: ['React', 'Redux', 'Sass'],
         url: 'https://devinterest.surge.sh/',
-        githubLink: '',
+        githubLink: 'https://github.com/romainAccoce/DevInterest',
         image: '/images/devinterest-screenshot.png',
     },
     {

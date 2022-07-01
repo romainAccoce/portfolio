@@ -401,25 +401,25 @@
 
             &--home-active {
               animation:
-                1s translate-right .1s forwards,
+                .5s translate-right .1s forwards,
                 .3s fade-in .1s forwards;
             }
 
             &--projects-active {
               animation:
-                1s translate-right .2s forwards,
+                .5s translate-right .2s forwards,
                 .3s fade-in .2s forwards;
             }
 
             &--about-active {
               animation:
-                1s translate-right .3s forwards,
+                .5s translate-right .3s forwards,
                 .3s fade-in .3s forwards;
             }
 
             &--contact-active {
               animation:
-                1s translate-right .4s forwards,
+                .5s translate-right .4s forwards,
                 .3s fade-in .4s forwards;
             }
           }

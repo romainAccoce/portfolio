@@ -309,6 +309,7 @@
     position: fixed;
     
     &__nav {
+      font-size: 1.5rem;
 
       &--active {
         transform: translateX(-100%);
@@ -320,7 +321,6 @@
         justify-content: space-between;
         align-items: center;
         background-color: vars.$nav-background;
-        font-size: 1rem;
         transition: all .3s;
         position: relative;
         padding: 4 * vars.$gutter 1.5 * vars.$gutter;
@@ -360,10 +360,10 @@
       }
 
       &__burger-button {
-        position: absolute;
-        top: 0;
-        right: -290%;
-        font-size: 2rem;
+        position: fixed;
+          right: 2 * vars.$gutter;
+          top: 0;
+          font-size: 2rem;
       }
 
       &__list {
@@ -401,25 +401,25 @@
 
             &--home-active {
               animation:
-                .5s translate-right .1s forwards,
+                1s translate-right .1s forwards,
                 .3s fade-in .1s forwards;
             }
 
             &--projects-active {
               animation:
-                .5s translate-right .2s forwards,
+                1s translate-right .2s forwards,
                 .3s fade-in .2s forwards;
             }
 
             &--about-active {
               animation:
-                .5s translate-right .3s forwards,
+                1s translate-right .3s forwards,
                 .3s fade-in .3s forwards;
             }
 
             &--contact-active {
               animation:
-                .5s translate-right .4s forwards,
+                1s translate-right .4s forwards,
                 .3s fade-in .4s forwards;
             }
           }

@@ -10,6 +10,14 @@ const Projects = () => {
     const dispatch = useDispatch();
     const { currentCard } = useSelector((state) => state.displayOptions);
 
+    const handleClick = (project) => {
+        if (currentCard === project.name) {
+            dispatch(setCurrentCard(""));
+        } else {
+            dispatch(setCurrentCard(project.name));
+        }
+    }
+
     return (
         <div className='projects' id='projects'>
             <h2 data-aos='fade-right' className='projects__title'>My work</h2>
@@ -22,7 +30,7 @@ const Projects = () => {
                         key={project.url}
                         onMouseOver={() => dispatch(setCurrentCard(project.name))}
                         onMouseLeave={() => dispatch(setCurrentCard(""))}
-                        onClick={() => dispatch(setCurrentCard(project.name))}
+                        onClick={() => handleClick(project)}
                         >
                         <img alt='project image' className={ currentCard === project.name ? 'projects__container__project-card__image projects__container__project-card__image--current' : 'projects__container__project-card__image'} src={project.image}/>
                         <div className='projects__container__project-card__content'>

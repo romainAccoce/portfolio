@@ -6,7 +6,6 @@
         display: flex;
         flex-wrap: wrap;
         gap: .5 * vars.$gutter;
-        margin-bottom: calc(25px + env(keyboard-inset-height));
 
         &__first-line {
             width: 100%;
@@ -63,6 +62,8 @@
         display: flex;
         flex-wrap: wrap;
         gap: .5 * vars.$gutter;
+        // This prevent the form to be push out of the scfreen on virtual keyboard activation
+        margin-bottom: calc(25px + env(keyboard-inset-height));
 
         &__first-line {
             width: 100%;
@@ -115,10 +116,11 @@
 
 @media screen and (max-width: 767px) {
     .form {
-        height: 100vh;
         display: flex;
         flex-direction: column;
         gap: .5 * vars.$gutter;
+        // This prevent the form to be push out of the scfreen on virtual keyboard activation
+        margin-bottom: calc(25px + env(keyboard-inset-height));
 
         &__first-line {
             width: 100%;

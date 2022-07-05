@@ -13,13 +13,13 @@
             display: flex;
             flex-wrap: wrap;
             gap: vars.$gutter;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
     
             &__project-card {
                 background-color: vars.$nav-background;
-                width: 25rem;
-                height: 25rem;
+                width: 24rem;
+                height: 24rem;
                 position: relative;
                 
                 &__image {

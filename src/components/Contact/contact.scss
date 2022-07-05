@@ -63,9 +63,9 @@
 
     .contact {
         width: 100%;
-        min-height: 100vh;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         padding: .5 * vars.$gutter;
         margin-top: 2 * vars.$gutter;
 

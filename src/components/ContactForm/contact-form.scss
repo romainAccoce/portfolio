@@ -6,6 +6,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: .5 * vars.$gutter;
+        margin-bottom: calc(25px + env(keyboard-inset-height));
 
         &__first-line {
             width: 100%;

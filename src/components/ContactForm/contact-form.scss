@@ -120,7 +120,7 @@
         flex-direction: column;
         gap: .5 * vars.$gutter;
         // This prevent the form to be push out of the scfreen on virtual keyboard activation
-        margin-bottom: calc(25px + env(keyboard-inset-height));
+        margin-bottom: calc(50px + env(keyboard-inset-height));
 
         &__first-line {
             width: 100%;

@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
 import displayOptionsReducer from './displayOptions';
-import contactFormFieldsReducer from './contactFormFields';
+import contactFormFieldsReducer from './contactForm';
 
 const rootReducer = combineReducers({
     displayOptions: displayOptionsReducer,

@@ -1,19 +1,49 @@
 @use "../../styles/vars";
 
-.burger {
-    opacity: 0;
-
-    &--active {
+@media screen and (min-width: 1024px) {
+    .burger {
         opacity: 0;
-        color: vars.$highlight-text;
-        font-size: 4rem;
-        line-height: .65rem;
-        animation: .3s fade-in forwards;
-        transition: all .3s;
+        z-index: 1000;
 
-        &:hover {
-            transform: translateX(0.2rem);
-            cursor: pointer;
+        &--active {
+            opacity: 0;
+            color: vars.$highlight-text;
+            font-size: 4rem;
+            line-height: .65rem;
+            animation: .3s fade-in forwards;
+            transition: all .3s;
+            position: fixed;
+            left: vars.$gutter;
+            top: 0;
+
+            &:hover {
+                transform: translateX(0.2rem);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .burger {
+        opacity: 0;
+        z-index: 1000;
+
+        &--active {
+            opacity: 0;
+            color: vars.$highlight-text;
+            font-size: 5rem;
+            line-height: .8rem;
+            animation: .3s fade-in forwards;
+            transition: all .3s;
+            position: fixed;
+            right: vars.$gutter;
+            top: 0;
+
+            &:hover {
+                transform: translateX(0.2rem);
+                cursor: pointer;
+            }
         }
     }
 }

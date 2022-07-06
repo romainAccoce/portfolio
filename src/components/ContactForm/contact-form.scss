@@ -21,6 +21,12 @@
                 font-family: "Nunito", sans-serif;
                 font-size: 1.2rem;
                 background-color: vars.$light-grey;
+                &:focus {
+                    border-bottom: 2px solid vars.$highlight-text;
+                    &::placeholder {
+                        color: transparent;
+                    }
+                }
             }
         }
 
@@ -35,14 +41,22 @@
     
             &:focus {
                 border-bottom: 2px solid vars.$highlight-text;
+                &::placeholder {
+                    color: transparent;
+                }
             }
            
             &__message {
                 height: 10rem;
                 resize: none;
+                font-family: "Nunito", sans-serif;
+                font-size: 1.2rem;
     
                 &:focus {
                     outline: none;
+                    &::placeholder {
+                        color: transparent;
+                    }
                 }
             }
     
@@ -62,8 +76,6 @@
         display: flex;
         flex-wrap: wrap;
         gap: .5 * vars.$gutter;
-        // This prevent the form to be push out of the scfreen on virtual keyboard activation
-        margin-bottom: calc(25px + env(keyboard-inset-height));
 
         &__first-line {
             width: 100%;
@@ -79,6 +91,12 @@
                 font-family: "Nunito", sans-serif;
                 font-size: 1.2rem;
                 background-color: vars.$light-grey;
+                &:focus {
+                    border-bottom: 2px solid vars.$highlight-text;
+                    &::placeholder {
+                        color: transparent;
+                    }
+                }
             }
         }
 
@@ -93,14 +111,22 @@
 
             &:focus {
                 border-bottom: 2px solid vars.$highlight-text;
+                &::placeholder {
+                    color: transparent;
+                }
             }
 
             &__message {
                 height: 10rem;
                 resize: none;
+                font-family: "Nunito", sans-serif;
+                font-size: 1.2rem;
 
                 &:focus {
                     outline: none;
+                    &::placeholder {
+                        color: transparent;
+                    }
                 }
             }
 
@@ -119,8 +145,6 @@
         display: flex;
         flex-direction: column;
         gap: .5 * vars.$gutter;
-        // This prevent the form to be push out of the scfreen on virtual keyboard activation
-        margin-bottom: calc(50px + env(keyboard-inset-height));
 
         &__first-line {
             width: 100%;
@@ -136,6 +160,13 @@
                 font-family: "Nunito", sans-serif;
                 font-size: 1.2rem;
                 background-color: vars.$light-grey;
+
+                &:focus {
+                    border-bottom: 2px solid vars.$highlight-text;
+                    &::placeholder {
+                        color: transparent;
+                    }
+                }
             }
         }
 
@@ -150,14 +181,22 @@
 
             &:focus {
                 border-bottom: 2px solid vars.$highlight-text;
+                &::placeholder {
+                    color: transparent;
+                }
             }
 
             &__message {
                 height: 10rem;
                 resize: none;
+                font-family: "Nunito", sans-serif;
+                font-size: 1.2rem;
 
                 &:focus {
                     outline: none;
+                    &::placeholder {
+                        color: transparent;
+                    }
                 }
             }
         }

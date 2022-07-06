@@ -6,6 +6,12 @@
     z-index: 2;
     color: vars.$light-text;
     position: fixed;
+    transform: translateX(-100%);
+    transition: all .3s;
+
+    &--active {
+      transform: translateX(0);
+    }
     
     &__nav {
       min-height: 100vh;
@@ -16,19 +22,17 @@
       align-items: center;
       background-color: vars.$nav-background;
       font-size: 1.2rem;
-      transform: translateX(-100%);
-      transition: all .3s;
-      position: relative;
       padding: 4 * vars.$gutter 1.5 * vars.$gutter ;
   
-      &--active {
-        transform: translateX(0);
-      }
-  
       &__darkmode-toggle {
+        width: 100%;
         animation: .3 fade-out forwards;
         opacity: 0;
         transform: translateX(-100%);
+        display: flex;
+        align-items: center;
+        gap: vars.$gutter;
+        font-size: 1rem;
   
         &--active {
           animation: 1s translate-right forwards,
@@ -54,12 +58,6 @@
           }
         }
   
-      }
-  
-      &__burger-button {
-        position: absolute;
-        right: -4rem;
-        top: 0;
       }
   
       &__list {
@@ -154,29 +152,35 @@
     z-index: 3;
     color: vars.$light-text;
     position: fixed;
+    transform: translateX(-100%);
+    transition: all .3s;
+    height: 100vh;
+    width: 100vw;
+
+    &--active {
+      transform: translateX(0);
+    }
 
     &__nav {
+      height: 100%;
+      width: 100%;
       font-size: 2rem;
-      
-      &--active {
-        transform: translateX(-100%);
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: vars.$nav-background;
-        transition: all .3s;
-        position: relative;
-        padding: 4 * vars.$gutter 1.5 * vars.$gutter;
-        transform: translateX(0);
-      }
-
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background-color: vars.$nav-background;
+      position: relative;
+      padding: 4 * vars.$gutter 1.5 * vars.$gutter;
+     
       &__darkmode-toggle {
         animation: .3 fade-out forwards;
         opacity: 0;
         transform: translateX(-100%);
+        display: flex;
+        align-items: center;
+        gap: vars.$gutter;
+        font-size: 1rem;
 
         &--active {
           animation: 1s translate-right forwards,
@@ -204,13 +208,6 @@
           }
         }
 
-      }
-
-      &__burger-button {
-        position: fixed;
-        right: 2 * vars.$gutter;
-        top: 0;
-        font-size: 2rem;
       }
 
       &__list {
@@ -307,29 +304,35 @@
     z-index: 3;
     color: vars.$light-text;
     position: fixed;
+    transform: translateX(-100%);
+    transition: all .3s;
+    height: 100vh;
+    width: 100vw;
+
+    &--active {
+      transform: translateX(0);
+    }
     
     &__nav {
+      height: 100%;
+      width: 100%;
       font-size: 1.5rem;
-
-      &--active {
-        transform: translateX(-100%);
-        transform: translateX(0);
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: vars.$nav-background;
-        transition: all .3s;
-        position: relative;
-        padding: 4 * vars.$gutter 1.5 * vars.$gutter;
-      }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background-color: vars.$nav-background;
+      position: relative;
+      padding: 4 * vars.$gutter 1.5 * vars.$gutter;
 
       &__darkmode-toggle {
         animation: .3 fade-out forwards;
         opacity: 0;
         transform: translateX(-100%);
+        display: flex;
+        align-items: center;
+        gap: vars.$gutter;
+        font-size: 1rem;
 
         &--active {
           animation: 1s translate-right forwards,
@@ -359,16 +362,14 @@
 
       }
 
-      &__burger-button {
-        position: fixed;
-        right: 2 * vars.$gutter;
-        top: 0;
-        font-size: 2rem;
-      }
-
       &__list {
         display: flex;
         flex-direction: column;
+        transform: translateX(-100%);
+
+        &--active {
+          transform: translateX(0);
+        }
 
         &__item {
           transition: all .3s;
@@ -384,7 +385,6 @@
             transition: all .3s;
             animation: .3 fade-out forwards;
             opacity: 0;
-            transform: translateX(-100%);
 
             &:hover {
               color: vars.$hover-text;

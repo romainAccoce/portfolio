@@ -2,7 +2,6 @@
 import './contact-form.scss';
 import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-scroll';
 import { setDisplaySuccessModal } from '../../actions/displayOptions';
 import { changeFormField, resetFormFields } from '../../actions/contactFormFields';
 import emailjs from '@emailjs/browser';

@@ -9,6 +9,7 @@ import About from "../About";
 import Projects from "../Projects";
 import Contact from "../Contact";
 import BackToTopButton from '../BackToTopButton';
+import Burger from '../Burger';
 
 const App = () => {
   const { darkMode } = useSelector((state) => state.displayOptions);
@@ -21,6 +22,7 @@ const App = () => {
   return (
     <div className={ !darkMode ? "app" : "app app--darkmode" }  >
       <Header />
+      <Burger />
       <BackToTopButton />
       <div className='app__sections'>
         <Home />

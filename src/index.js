@@ -7,7 +7,6 @@ import store from './store';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
-
 // Prevent content from being hidden underneath the Virtual Keyboard by means of the VirtualKeyboard API
 if ("virtualKeyboard" in navigator) {
 navigator.virtualKeyboard.overlaysContent = true;

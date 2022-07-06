@@ -25,9 +25,14 @@
       padding: 4 * vars.$gutter 1.5 * vars.$gutter ;
   
       &__darkmode-toggle {
+        width: 100%;
         animation: .3 fade-out forwards;
         opacity: 0;
         transform: translateX(-100%);
+        display: flex;
+        align-items: center;
+        gap: vars.$gutter;
+        font-size: 1rem;
   
         &--active {
           animation: 1s translate-right forwards,
@@ -167,11 +172,15 @@
       background-color: vars.$nav-background;
       position: relative;
       padding: 4 * vars.$gutter 1.5 * vars.$gutter;
-      
+     
       &__darkmode-toggle {
         animation: .3 fade-out forwards;
         opacity: 0;
         transform: translateX(-100%);
+        display: flex;
+        align-items: center;
+        gap: vars.$gutter;
+        font-size: 1rem;
 
         &--active {
           animation: 1s translate-right forwards,
@@ -199,13 +208,6 @@
           }
         }
 
-      }
-
-      &__burger-button {
-        position: fixed;
-        right: 2 * vars.$gutter;
-        top: 0;
-        font-size: 2rem;
       }
 
       &__list {
@@ -327,6 +329,10 @@
         animation: .3 fade-out forwards;
         opacity: 0;
         transform: translateX(-100%);
+        display: flex;
+        align-items: center;
+        gap: vars.$gutter;
+        font-size: 1rem;
 
         &--active {
           animation: 1s translate-right forwards,
@@ -354,13 +360,6 @@
           }
         }
 
-      }
-
-      &__burger-button {
-        position: fixed;
-        right: 2 * vars.$gutter;
-        top: 0;
-        font-size: 2rem;
       }
 
       &__list {

@@ -32,9 +32,10 @@ const Header = () => {
 
     return (
         <div className={displayMenu ? 'header header--active' : 'header'}>
-            <nav className={ displayMenu ? 'header__nav header__nav--active' : 'header__nav'} >
+            <nav className='header__nav'>
                 <div className={ displayMenu ? 'header__nav__close-button header__nav__close-button--active' : 'header__nav__close-button'}   onClick={() => dispatch(setDisplayMenu())}>+</div>
                 <div className={ displayMenu ? 'header__nav__darkmode-toggle header__nav__darkmode-toggle--active' : 'header__nav__darkmode-toggle' } >
+                    <p>Dark Mode</p>
                     <ToggleButton isOn={darkMode} handleToggle={ ()=> dispatch(setDarkMode(!darkMode))} role={'set-darkmode'} />
                 </div>
                 <ul className={ displayMenu ? 'header__nav__list header__nav__list--active' : 'header__nav__list'} >

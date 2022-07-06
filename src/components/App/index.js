@@ -1,7 +1,7 @@
 import './app.scss';
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import AOS from "aos";
 import Header from '../Header';
 import Home from '../Home';
@@ -12,6 +12,7 @@ import BackToTopButton from '../BackToTopButton';
 import Burger from '../Burger';
 
 const App = () => {
+  const dispatch= useDispatch();
   const { darkMode } = useSelector((state) => state.displayOptions);
 
   useEffect(() => {

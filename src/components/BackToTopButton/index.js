@@ -17,7 +17,7 @@ const BackToTopButton = () => {
         dispatch(setScrollToTopButton(false));
       }
     });
-  }, [window]);
+  }, [dispatch]);
 
   return (
     <div

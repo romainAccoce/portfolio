@@ -1,12 +1,9 @@
-import './tag.scss';
+import "./tag.scss";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-const Tag = ({tech}) => {
-
-    return (
-        <div className='tag'>#{tech}</div>
-    );
+const Tag = ({ tech }) => {
+  return <div className="tag">#{tech}</div>;
 };
 
 Tag.propTypes = {

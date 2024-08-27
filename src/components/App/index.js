@@ -1,6 +1,6 @@
 import "./app.scss";
 import "aos/dist/aos.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setProjects } from "../../actions/displayOptions";
 import AOS from "aos";
@@ -28,10 +28,10 @@ const App = () => {
       .catch((error) => console.log(error));
   };
 
+  getProjectssData();
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
-    getProjectssData();
-    // AOS.refresh();
   }, []);
 
   return (

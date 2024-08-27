@@ -1,5 +1,4 @@
 import "./header.scss";
-import Burger from "../Burger";
 import { setDisplayMenu, setDarkMode } from "../../actions/displayOptions";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";

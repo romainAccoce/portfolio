@@ -10,7 +10,6 @@ import About from "../About";
 import Projects from "../Projects";
 import Contact from "../Contact";
 import BackToTopButton from "../BackToTopButton";
-import Burger from "../Burger";
 import axios from "axios";
 import { apiConfig } from "../../selectors";
 
@@ -37,7 +36,6 @@ const App = () => {
   return (
     <div className={!darkMode ? "app" : "app app--darkmode"}>
       <Header />
-      <Burger />
       <BackToTopButton />
       <div className="app__sections">
         <Home />

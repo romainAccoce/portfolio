@@ -8,6 +8,13 @@ import {
   faTwitter,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  faChevronCircleRight,
+  faHome,
+  faCode,
+  faInfoCircle,
+  faAddressCard,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ToggleButton from "../ToggleButton";
 
@@ -20,7 +27,7 @@ const Header = () => {
   useEffect(() => {
     const getDarkModeSetting = localStorage.getItem("darkModeLS");
 
-    if (getDarkModeSetting === "true") {
+    if (getDarkModeSetting === "true" || !getDarkModeSetting) {
       dispatch(setDarkMode(true));
     } else {
       dispatch(setDarkMode(false));
@@ -43,7 +50,7 @@ const Header = () => {
           }
           onClick={() => dispatch(setDisplayMenu())}
         >
-          +
+          <FontAwesomeIcon icon={faChevronCircleRight} size="lg" />
         </div>
         <div
           className={
@@ -52,7 +59,7 @@ const Header = () => {
               : "header__nav__darkmode-toggle"
           }
         >
-          <p>Dark Mode</p>
+          <p>{darkMode ? "Light" : "Dark"}</p>
           <ToggleButton
             isOn={darkMode}
             handleToggle={() => dispatch(setDarkMode(!darkMode))}
@@ -79,7 +86,24 @@ const Header = () => {
               smooth={true}
               duration={500}
             >
-              Home
+              <FontAwesomeIcon
+                className={
+                  displayMenu
+                    ? "header__nav__list__item__link_icon header__nav__list__item__link_icon--home-active"
+                    : "header__nav__list__item__link_icon"
+                }
+                icon={faHome}
+                size="lg"
+              />
+              <p
+                className={
+                  displayMenu
+                    ? "header__nav__list__item__link_text header__nav__list__item__link_text--home-active"
+                    : "header__nav__list__item__link_text"
+                }
+              >
+                Home
+              </p>
             </Link>
           </li>
           <li className="header__nav__list__item">
@@ -95,7 +119,24 @@ const Header = () => {
               smooth={true}
               duration={500}
             >
-              Projects
+              <FontAwesomeIcon
+                className={
+                  displayMenu
+                    ? "header__nav__list__item__link_icon header__nav__list__item__link_icon--projects-active"
+                    : "header__nav__list__item__link_icon"
+                }
+                icon={faCode}
+                size="lg"
+              />
+              <p
+                className={
+                  displayMenu
+                    ? "header__nav__list__item__link_text header__nav__list__item__link_text--projects-active"
+                    : "header__nav__list__item__link_text"
+                }
+              >
+                Projects
+              </p>
             </Link>
           </li>
           <li className="header__nav__list__item">
@@ -111,10 +152,26 @@ const Header = () => {
               smooth={true}
               duration={500}
             >
-              About
+              <FontAwesomeIcon
+                className={
+                  displayMenu
+                    ? "header__nav__list__item__link_icon header__nav__list__item__link_icon--about-active"
+                    : "header__nav__list__item__link_icon"
+                }
+                icon={faInfoCircle}
+                size="lg"
+              />
+              <p
+                className={
+                  displayMenu
+                    ? "header__nav__list__item__link_text header__nav__list__item__link_text--about-active"
+                    : "header__nav__list__item__link_text"
+                }
+              >
+                About
+              </p>
             </Link>
           </li>
-
           <li className="header__nav__list__item">
             <Link
               className={
@@ -128,7 +185,24 @@ const Header = () => {
               smooth={true}
               duration={500}
             >
-              Contact
+              <FontAwesomeIcon
+                className={
+                  displayMenu
+                    ? "header__nav__list__item__link_icon header__nav__list__item__link_icon--contact-active"
+                    : "header__nav__list__item__link_icon"
+                }
+                icon={faAddressCard}
+                size="lg"
+              />
+              <p
+                className={
+                  displayMenu
+                    ? "header__nav__list__item__link_text header__nav__list__item__link_text--contact-active"
+                    : "header__nav__list__item__link_text"
+                }
+              >
+                Contact
+              </p>
             </Link>
           </li>
         </ul>

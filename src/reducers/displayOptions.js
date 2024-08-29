@@ -11,7 +11,7 @@ import {
 const initialState = {
   darkMode: true,
   currentCard: " ",
-  displayMenu: true,
+  displayMenu: false,
   displaySuccessModal: "",
   scrollToTopButton: false,
   projects: [],
